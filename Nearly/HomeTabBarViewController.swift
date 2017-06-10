@@ -12,7 +12,7 @@ import UIKit
 import UIKit
 
 
-class XHERHomeTabBarViewController: UIViewController {
+class HomeTabBarViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
     
