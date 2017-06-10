@@ -53,16 +53,20 @@
                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lKA-5F-oSq">
                                     <rect key="frame" x="250" y="0.0" width="125" height="60"/>
                                     <subviews>
-                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-dJ-sub">
+                                        <imageView clipsSubviews="YES" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="w" translatesAutoresizingMaskIntoConstraints="NO" id="ibT-dJ-sub">
                                             <rect key="frame" x="40" y="8" width="45" height="45"/>
                                             <gestureRecognizers/>
                                             <constraints>
                                                 <constraint firstAttribute="width" secondItem="ibT-dJ-sub" secondAttribute="height" multiplier="1:1" id="Xhu-40-zT6"/>
                                                 <constraint firstAttribute="height" constant="45" id="uPS-cu-Cjh"/>
                                             </constraints>
+                                            <connections>
+                                                <outletCollection property="gestureRecognizers" destination="lsN-8y-UNG" appends="YES" id="6Rd-bM-cDK"/>
+                                            </connections>
                                         </imageView>
                                     </subviews>
                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                    <gestureRecognizers/>
                                     <constraints>
                                         <constraint firstItem="ibT-dJ-sub" firstAttribute="centerY" secondItem="lKA-5F-oSq" secondAttribute="centerY" id="K81-ea-zho"/>
                                         <constraint firstItem="ibT-dJ-sub" firstAttribute="centerX" secondItem="lKA-5F-oSq" secondAttribute="centerX" id="Oic-dH-eMB"/>
@@ -93,11 +97,17 @@
             </constraints>
             <point key="canvasLocation" x="32.5" y="59.5"/>
         </view>
+        <tapGestureRecognizer id="lsN-8y-UNG">
+            <connections>
+                <action selector="touchOnProfileImageView:" destination="-1" id="4SZ-DJ-YAY"/>
+            </connections>
+        </tapGestureRecognizer>
     </objects>
     <resources>
         <image name="home" width="25" height="26"/>
         <image name="homeSelected" width="25" height="26"/>
         <image name="searchSelected" width="25" height="25"/>
         <image name="searchTab" width="26" height="27"/>
+        <image name="w" width="103" height="152"/>
     </resources>
 </document>

@@ -53,6 +53,11 @@ class HomeTabBarViewController: UIViewController {
         super.viewDidLoad()
         
         self.setupContainedControllers()
+        
+        profileImageView.layer.cornerRadius = profileImageView.bounds.size.height/2
+        profileImageView.layer.borderColor = UIColor.gray.cgColor
+        profileImageView.layer.borderWidth = 2
+
         // Do any additional setup after loading the view.
         
         
