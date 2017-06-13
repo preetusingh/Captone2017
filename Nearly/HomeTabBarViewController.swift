@@ -67,15 +67,15 @@ class XHERHomeTabBarViewController: UIViewController {
     func setupContainedControllers() {
         homeFeedViewController = HomeFeedViewController()
         homeFeedNavi = UINavigationController(rootViewController: homeFeedViewController)
-        homeFeedNavi.navigationBar.barTintColor = kXHERYellow
+        //homeFeedNavi.navigationBar.barTintColor =
         
         discoverViewController = DiscoveryViewController()
         discoveryNavi = UINavigationController(rootViewController: discoverViewController)
-        discoveryNavi.navigationBar.barTintColor = kXHERYellow
+        //discoveryNavi.navigationBar.barTintColor =
         
         profileViewController = ProfileViewController()
         profileNavi = UINavigationController(rootViewController: profileViewController)
-        profileNavi.navigationBar.barTintColor = kXHERYellow
+        //profileNavi.navigationBar.barTintColor =
         
         self.contentVC = homeFeedNavi
     }
