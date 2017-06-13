@@ -23,6 +23,9 @@
 		02DB73441EF0964A00C5C467 /* HomeFeedViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DB73421EF0964A00C5C467 /* HomeFeedViewController.xib */; };
 		02DB73481EF0967C00C5C467 /* DiscoveryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB73461EF0967C00C5C467 /* DiscoveryViewController.swift */; };
 		02DB73491EF0967C00C5C467 /* DiscoveryViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DB73471EF0967C00C5C467 /* DiscoveryViewController.xib */; };
+		02DB734D1EF096AB00C5C467 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB734B1EF096AB00C5C467 /* ProfileViewController.swift */; };
+		02DB734E1EF096AB00C5C467 /* ProfileViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DB734C1EF096AB00C5C467 /* ProfileViewController.xib */; };
+		02DB73501EF0972200C5C467 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB734F1EF0972200C5C467 /* Constant.swift */; };
 		CDB3582AE4F765D018ED642E /* Pods_Nearly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A2262A42CC002EA9424DBE /* Pods_Nearly.framework */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +48,9 @@
 		02DB73421EF0964A00C5C467 /* HomeFeedViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFeedViewController.xib; sourceTree = "<group>"; };
 		02DB73461EF0967C00C5C467 /* DiscoveryViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DiscoveryViewController.swift; sourceTree = "<group>"; };
 		02DB73471EF0967C00C5C467 /* DiscoveryViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DiscoveryViewController.xib; sourceTree = "<group>"; };
+		02DB734B1EF096AB00C5C467 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		02DB734C1EF096AB00C5C467 /* ProfileViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ProfileViewController.xib; sourceTree = "<group>"; };
+		02DB734F1EF0972200C5C467 /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		C0A2262A42CC002EA9424DBE /* Pods_Nearly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nearly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4FF66D7EE1CA1375D254FF5 /* Pods-Nearly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nearly/Pods-Nearly.release.xcconfig"; sourceTree = "<group>"; };
 		E5AE676C8D7A082CC9EDC771 /* Pods-Nearly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nearly/Pods-Nearly.debug.xcconfig"; sourceTree = "<group>"; };
@@ -91,6 +97,7 @@
 				024AE2811EE71D5100444E7F /* Assets.xcassets */,
 				024AE2831EE71D5100444E7F /* LaunchScreen.storyboard */,
 				024AE2861EE71D5100444E7F /* Info.plist */,
+				02DB734F1EF0972200C5C467 /* Constant.swift */,
 			);
 			path = Nearly;
 			sourceTree = "<group>";
@@ -113,6 +120,7 @@
 		024AE2901EE71D7D00444E7F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02DB734A1EF0969C00C5C467 /* Profile */,
 				02DB73451EF0966D00C5C467 /* Discovery */,
 				02DB73401EF0963800C5C467 /* HomeFeed */,
 				02DB733B1EF0943D00C5C467 /* HomeTabBar */,
@@ -174,6 +182,15 @@
 				02DB73471EF0967C00C5C467 /* DiscoveryViewController.xib */,
 			);
 			name = Discovery;
+			sourceTree = "<group>";
+		};
+		02DB734A1EF0969C00C5C467 /* Profile */ = {
+			isa = PBXGroup;
+			children = (
+				02DB734B1EF096AB00C5C467 /* ProfileViewController.swift */,
+				02DB734C1EF096AB00C5C467 /* ProfileViewController.xib */,
+			);
+			name = Profile;
 			sourceTree = "<group>";
 		};
 		4C831E6BB42210ADDFC2B502 /* Frameworks */ = {
@@ -256,6 +273,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02DB734E1EF096AB00C5C467 /* ProfileViewController.xib in Resources */,
 				024AE2851EE71D5100444E7F /* LaunchScreen.storyboard in Resources */,
 				02DB733F1EF0944D00C5C467 /* HomeTabBarViewController.xib in Resources */,
 				024AE2821EE71D5100444E7F /* Assets.xcassets in Resources */,
@@ -328,6 +346,8 @@
 				02DB73431EF0964A00C5C467 /* HomeFeedViewController.swift in Sources */,
 				02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */,
 				02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */,
+				02DB734D1EF096AB00C5C467 /* ProfileViewController.swift in Sources */,
+				02DB73501EF0972200C5C467 /* Constant.swift in Sources */,
 				024AE2961EE7218C00444E7F /* loginInputView.swift in Sources */,
 				02DB73481EF0967C00C5C467 /* DiscoveryViewController.swift in Sources */,
 			);
