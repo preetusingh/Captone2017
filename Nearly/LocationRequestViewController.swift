@@ -54,7 +54,7 @@ class LocationRequestViewController: UIViewController,STLocationRequestControlle
     func showHomePage(){
         
         //self.dismiss(animated: true, completion: nil)
-        let homeTabBarVC = XHERHomeTabBarViewController()
+        let homeTabBarVC = HomeTabBarViewController()
         self.present(homeTabBarVC, animated: false, completion: nil)
         
     }

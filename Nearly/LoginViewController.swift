@@ -114,18 +114,8 @@ class LoginViewController: UIViewController {
     
     
     func login(userName: String, password: String){
-//        User.logInWithUsername(inBackground: userName, password: password) { (user: PFUser?, error:Error?) in
-//            if let error = error {
-//                print(error.localizedDescription)
-//            }
-//            else {
-//                print("userLogged In \(user?.username)")
-//                //                self.performSegue(withIdentifier: "segueToTimeLine", sender: nil)
-//                self.openNextController()
-//                
-//                
-//            }
-//        }
+
+        self.openNextController()
         
     }
     
@@ -186,20 +176,20 @@ class LoginViewController: UIViewController {
         if CLLocationManager.locationServicesEnabled() {
             switch(CLLocationManager.authorizationStatus()) {
             case .notDetermined, .restricted, .denied:
-                let locationReq = XHERELocationRequestViewController(nibName: "XHERELocationRequestViewController", bundle: nil)
+                let locationReq = LocationRequestViewController(nibName: "LocationRequestViewController", bundle: nil)
                 
                 self.present(locationReq, animated: true, completion: nil)
                 
                 
             case .authorizedAlways, .authorizedWhenInUse:
-                let homeTabBarVC = XHERHomeTabBarViewController()
+                let homeTabBarVC = HomeTabBarViewController()
                 self.present(homeTabBarVC, animated: false, completion: nil)
                 
                 
             }
         } else {
             print("Location services are not enabled")
-            let locationReq = XHERELocationRequestViewController(nibName: "XHERELocationRequestViewController", bundle: nil)
+            let locationReq = LocationRequestViewController(nibName: "LocationRequestViewController", bundle: nil)
             
             self.present(locationReq, animated: true, completion: nil)
             
