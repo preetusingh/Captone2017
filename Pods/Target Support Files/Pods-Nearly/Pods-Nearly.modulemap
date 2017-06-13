@@ -1,0 +1,6 @@
+framework module Pods_Nearly {
+  umbrella header "Pods-Nearly-umbrella.h"
+
+  export *
+  module * { export * }
+}

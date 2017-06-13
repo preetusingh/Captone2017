@@ -8,20 +8,34 @@
 
 /* Begin PBXBuildFile section */
 		024AE27B1EE71D5100444E7F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE27A1EE71D5100444E7F /* AppDelegate.swift */; };
-		024AE27D1EE71D5100444E7F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE27C1EE71D5100444E7F /* ViewController.swift */; };
 		024AE2801EE71D5100444E7F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024AE27E1EE71D5100444E7F /* Main.storyboard */; };
 		024AE2821EE71D5100444E7F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 024AE2811EE71D5100444E7F /* Assets.xcassets */; };
 		024AE2851EE71D5100444E7F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 024AE2831EE71D5100444E7F /* LaunchScreen.storyboard */; };
+		024AE28E1EE71D6D00444E7F /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE28D1EE71D6D00444E7F /* User.swift */; };
+		024AE2931EE71F9200444E7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE2921EE71F9200444E7F /* LoginViewController.swift */; };
+		024AE2961EE7218C00444E7F /* loginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE2951EE7218C00444E7F /* loginInputView.swift */; };
+		024AE2981EE721BD00444E7F /* loginInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024AE2971EE721BD00444E7F /* loginInputView.xib */; };
+		02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */; };
+		02DB733A1EF08FF000C5C467 /* LocationRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */; };
+		CDB3582AE4F765D018ED642E /* Pods_Nearly.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0A2262A42CC002EA9424DBE /* Pods_Nearly.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		024AE2771EE71D5100444E7F /* Nearly.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Nearly.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		024AE27A1EE71D5100444E7F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		024AE27C1EE71D5100444E7F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		024AE27F1EE71D5100444E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		024AE2811EE71D5100444E7F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		024AE2841EE71D5100444E7F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		024AE2861EE71D5100444E7F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		024AE28D1EE71D6D00444E7F /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		024AE2921EE71F9200444E7F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		024AE2951EE7218C00444E7F /* loginInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginInputView.swift; sourceTree = "<group>"; };
+		024AE2971EE721BD00444E7F /* loginInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginInputView.xib; sourceTree = "<group>"; };
+		02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRequestViewController.swift; sourceTree = "<group>"; };
+		02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationRequestViewController.xib; sourceTree = "<group>"; };
+		C0A2262A42CC002EA9424DBE /* Pods_Nearly.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nearly.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4FF66D7EE1CA1375D254FF5 /* Pods-Nearly.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearly.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nearly/Pods-Nearly.release.xcconfig"; sourceTree = "<group>"; };
+		E5AE676C8D7A082CC9EDC771 /* Pods-Nearly.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nearly.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nearly/Pods-Nearly.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +43,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CDB3582AE4F765D018ED642E /* Pods_Nearly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +55,8 @@
 			children = (
 				024AE2791EE71D5100444E7F /* Nearly */,
 				024AE2781EE71D5100444E7F /* Products */,
+				EF6CCE1AFC72A92C421856DB /* Pods */,
+				4C831E6BB42210ADDFC2B502 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,14 +71,84 @@
 		024AE2791EE71D5100444E7F /* Nearly */ = {
 			isa = PBXGroup;
 			children = (
+				024AE2901EE71D7D00444E7F /* Controller */,
+				024AE28F1EE71D7800444E7F /* View */,
+				024AE28C1EE71D5900444E7F /* Model */,
 				024AE27A1EE71D5100444E7F /* AppDelegate.swift */,
-				024AE27C1EE71D5100444E7F /* ViewController.swift */,
 				024AE27E1EE71D5100444E7F /* Main.storyboard */,
 				024AE2811EE71D5100444E7F /* Assets.xcassets */,
 				024AE2831EE71D5100444E7F /* LaunchScreen.storyboard */,
 				024AE2861EE71D5100444E7F /* Info.plist */,
 			);
 			path = Nearly;
+			sourceTree = "<group>";
+		};
+		024AE28C1EE71D5900444E7F /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				024AE28D1EE71D6D00444E7F /* User.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		024AE28F1EE71D7800444E7F /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		024AE2901EE71D7D00444E7F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				02DB73361EF08FCC00C5C467 /* Location */,
+				024AE2911EE71E2B00444E7F /* Login */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		024AE2911EE71E2B00444E7F /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				024AE2941EE7203800444E7F /* InputView */,
+				024AE2921EE71F9200444E7F /* LoginViewController.swift */,
+			);
+			name = Login;
+			sourceTree = "<group>";
+		};
+		024AE2941EE7203800444E7F /* InputView */ = {
+			isa = PBXGroup;
+			children = (
+				024AE2951EE7218C00444E7F /* loginInputView.swift */,
+				024AE2971EE721BD00444E7F /* loginInputView.xib */,
+			);
+			name = InputView;
+			sourceTree = "<group>";
+		};
+		02DB73361EF08FCC00C5C467 /* Location */ = {
+			isa = PBXGroup;
+			children = (
+				02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */,
+				02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */,
+			);
+			name = Location;
+			sourceTree = "<group>";
+		};
+		4C831E6BB42210ADDFC2B502 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C0A2262A42CC002EA9424DBE /* Pods_Nearly.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EF6CCE1AFC72A92C421856DB /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E5AE676C8D7A082CC9EDC771 /* Pods-Nearly.debug.xcconfig */,
+				E4FF66D7EE1CA1375D254FF5 /* Pods-Nearly.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -71,9 +158,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 024AE2891EE71D5100444E7F /* Build configuration list for PBXNativeTarget "Nearly" */;
 			buildPhases = (
+				5BDF557F382D550EA92D6EEE /* [CP] Check Pods Manifest.lock */,
 				024AE2731EE71D5100444E7F /* Sources */,
 				024AE2741EE71D5100444E7F /* Frameworks */,
 				024AE2751EE71D5100444E7F /* Resources */,
+				0735C13A8B766310A64A32BD /* [CP] Embed Pods Frameworks */,
+				D20F5D80173ECDAFB788D8B7 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -127,18 +217,71 @@
 				024AE2851EE71D5100444E7F /* LaunchScreen.storyboard in Resources */,
 				024AE2821EE71D5100444E7F /* Assets.xcassets in Resources */,
 				024AE2801EE71D5100444E7F /* Main.storyboard in Resources */,
+				02DB733A1EF08FF000C5C467 /* LocationRequestViewController.xib in Resources */,
+				024AE2981EE721BD00444E7F /* loginInputView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0735C13A8B766310A64A32BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nearly/Pods-Nearly-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5BDF557F382D550EA92D6EEE /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D20F5D80173ECDAFB788D8B7 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Nearly/Pods-Nearly-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		024AE2731EE71D5100444E7F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				024AE27D1EE71D5100444E7F /* ViewController.swift in Sources */,
+				024AE2931EE71F9200444E7F /* LoginViewController.swift in Sources */,
 				024AE27B1EE71D5100444E7F /* AppDelegate.swift in Sources */,
+				024AE28E1EE71D6D00444E7F /* User.swift in Sources */,
+				02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */,
+				024AE2961EE7218C00444E7F /* loginInputView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +402,7 @@
 		};
 		024AE28A1EE71D5100444E7F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E5AE676C8D7A082CC9EDC771 /* Pods-Nearly.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76BC6YJE4F;
@@ -272,6 +416,7 @@
 		};
 		024AE28B1EE71D5100444E7F /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4FF66D7EE1CA1375D254FF5 /* Pods-Nearly.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 76BC6YJE4F;
@@ -302,6 +447,7 @@
 				024AE28B1EE71D5100444E7F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
