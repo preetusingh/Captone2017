@@ -15,6 +15,13 @@
 		024AE2931EE71F9200444E7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE2921EE71F9200444E7F /* LoginViewController.swift */; };
 		024AE2961EE7218C00444E7F /* loginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE2951EE7218C00444E7F /* loginInputView.swift */; };
 		024AE2981EE721BD00444E7F /* loginInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024AE2971EE721BD00444E7F /* loginInputView.xib */; };
+		02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */; };
+		02AF5CE81EF9F34000FB8E01 /* AutoCompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */; };
+		02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE91EF9F3B900FB8E01 /* POI.swift */; };
+		02AF5CED1EF9F45400FB8E01 /* GooglePlacesServer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CEC1EF9F45400FB8E01 /* GooglePlacesServer.swift */; };
+		02AF5CEF1EF9F45400FB8E01 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02AF5CEE1EF9F45400FB8E01 /* CoreLocation.framework */; };
+		02AF5CF11EF9F45400FB8E01 /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02AF5CF01EF9F45400FB8E01 /* MapKit.framework */; };
+		02AF5CF41EF9F45400FB8E01 /* GeoPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CF31EF9F45400FB8E01 /* GeoPoint.swift */; };
 		02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */; };
 		02DB733A1EF08FF000C5C467 /* LocationRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */; };
 		02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB733C1EF0944D00C5C467 /* HomeTabBarViewController.swift */; };
@@ -40,6 +47,13 @@
 		024AE2921EE71F9200444E7F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		024AE2951EE7218C00444E7F /* loginInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginInputView.swift; sourceTree = "<group>"; };
 		024AE2971EE721BD00444E7F /* loginInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginInputView.xib; sourceTree = "<group>"; };
+		02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteCell.swift; sourceTree = "<group>"; };
+		02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCompleteCell.xib; sourceTree = "<group>"; };
+		02AF5CE91EF9F3B900FB8E01 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
+		02AF5CEC1EF9F45400FB8E01 /* GooglePlacesServer.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesServer.swift; sourceTree = "<group>"; };
+		02AF5CEE1EF9F45400FB8E01 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		02AF5CF01EF9F45400FB8E01 /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
+		02AF5CF31EF9F45400FB8E01 /* GeoPoint.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GeoPoint.swift; sourceTree = "<group>"; };
 		02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRequestViewController.swift; sourceTree = "<group>"; };
 		02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationRequestViewController.xib; sourceTree = "<group>"; };
 		02DB733C1EF0944D00C5C467 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -61,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				02AF5CF11EF9F45400FB8E01 /* MapKit.framework in Frameworks */,
+				02AF5CEF1EF9F45400FB8E01 /* CoreLocation.framework in Frameworks */,
 				CDB3582AE4F765D018ED642E /* Pods_Nearly.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -106,6 +122,8 @@
 			isa = PBXGroup;
 			children = (
 				024AE28D1EE71D6D00444E7F /* User.swift */,
+				02AF5CE91EF9F3B900FB8E01 /* POI.swift */,
+				02AF5CF31EF9F45400FB8E01 /* GeoPoint.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -120,6 +138,8 @@
 		024AE2901EE71D7D00444E7F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02AF5CEB1EF9F44300FB8E01 /* API */,
+				02AF5CE41EF9F31500FB8E01 /* AutoCompleteCell */,
 				02DB734A1EF0969C00C5C467 /* Profile */,
 				02DB73451EF0966D00C5C467 /* Discovery */,
 				02DB73401EF0963800C5C467 /* HomeFeed */,
@@ -146,6 +166,23 @@
 				024AE2971EE721BD00444E7F /* loginInputView.xib */,
 			);
 			name = InputView;
+			sourceTree = "<group>";
+		};
+		02AF5CE41EF9F31500FB8E01 /* AutoCompleteCell */ = {
+			isa = PBXGroup;
+			children = (
+				02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */,
+				02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */,
+			);
+			name = AutoCompleteCell;
+			sourceTree = "<group>";
+		};
+		02AF5CEB1EF9F44300FB8E01 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				02AF5CEC1EF9F45400FB8E01 /* GooglePlacesServer.swift */,
+			);
+			name = API;
 			sourceTree = "<group>";
 		};
 		02DB73361EF08FCC00C5C467 /* Location */ = {
@@ -196,6 +233,8 @@
 		4C831E6BB42210ADDFC2B502 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				02AF5CF01EF9F45400FB8E01 /* MapKit.framework */,
+				02AF5CEE1EF9F45400FB8E01 /* CoreLocation.framework */,
 				C0A2262A42CC002EA9424DBE /* Pods_Nearly.framework */,
 			);
 			name = Frameworks;
@@ -282,6 +321,7 @@
 				02DB73441EF0964A00C5C467 /* HomeFeedViewController.xib in Resources */,
 				02DB733A1EF08FF000C5C467 /* LocationRequestViewController.xib in Resources */,
 				024AE2981EE721BD00444E7F /* loginInputView.xib in Resources */,
+				02AF5CE81EF9F34000FB8E01 /* AutoCompleteCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +383,10 @@
 				024AE2931EE71F9200444E7F /* LoginViewController.swift in Sources */,
 				024AE27B1EE71D5100444E7F /* AppDelegate.swift in Sources */,
 				024AE28E1EE71D6D00444E7F /* User.swift in Sources */,
+				02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */,
+				02AF5CF41EF9F45400FB8E01 /* GeoPoint.swift in Sources */,
+				02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */,
+				02AF5CED1EF9F45400FB8E01 /* GooglePlacesServer.swift in Sources */,
 				02DB73431EF0964A00C5C467 /* HomeFeedViewController.swift in Sources */,
 				02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */,
 				02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */,
