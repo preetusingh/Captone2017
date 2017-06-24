@@ -38,18 +38,25 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="128" id="n6E-Xf-Eyk"/>
                     </constraints>
-                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QDT-zF-1WT" customClass="CenterCellCollectionViewFlowLayout" customModule="xHere" customModuleProvider="target">
+                    <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="QDT-zF-1WT" customClass="CenterCellCollectionViewFlowLayout" customModule="Nearly" customModuleProvider="target">
                         <size key="itemSize" width="300" height="128"/>
                         <size key="headerReferenceSize" width="0.0" height="0.0"/>
                         <size key="footerReferenceSize" width="0.0" height="0.0"/>
                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                     </collectionViewFlowLayout>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="fZ4-7h-L6d"/>
+                        <outlet property="delegate" destination="-1" id="bT8-vt-Q0Z"/>
+                    </connections>
                 </collectionView>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Search for Places" textAlignment="natural" clearsOnBeginEditing="YES" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="czl-N2-uiZ">
                     <rect key="frame" x="20" y="26" width="335" height="30"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="14"/>
                     <textInputTraits key="textInputTraits" returnKeyType="search"/>
+                    <connections>
+                        <outlet property="delegate" destination="-1" id="TOl-gk-b2a"/>
+                    </connections>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="r2d-Un-jl8">
                     <rect key="frame" x="291" y="419" width="44" height="44"/>
@@ -69,6 +76,10 @@
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="VeG-QG-WD5">
                     <rect key="frame" x="20" y="56" width="335" height="547"/>
                     <color key="backgroundColor" red="0.98039215690000003" green="0.88235294119999996" blue="0.1176470588" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="d8w-gE-fbQ"/>
+                        <outlet property="delegate" destination="-1" id="ldj-eC-585"/>
+                    </connections>
                 </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>

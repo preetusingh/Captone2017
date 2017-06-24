@@ -7,7 +7,9 @@
 //
 
 import UIKit
-
+import Parse
+import FacebookSDK
+import ParseFacebookUtils
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -17,7 +19,61 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        let parseClientConfig = ParseClientConfiguration.init { (config:ParseMutableClientConfiguration) in
+            config.applicationId = "com.xHere"
+            config.server = "https://xHere.herokuapp.com/parse"
+        }
+        
+        
+        Parse.initialize(with: parseClientConfig)
+        PFAnalytics.trackAppOpened(launchOptions: launchOptions)
+        PFFacebookUtils.initializeFacebook()
+        if PFUser.current() != nil {
+        
+                self.openNextController()
+            
+            
+        }
+        
+        NotificationCenter.default.addObserver(forName: NSNotification.Name(rawValue: "userDidLogOut"), object: nil, queue: OperationQueue.main) { (notification: Notification) in
+            let storyBoard = UIStoryboard(name: "Main", bundle: nil)
+            let vc = storyBoard.instantiateInitialViewController()
+            self.window?.rootViewController = vc
+            
+        }
+        
+        
         return true
+    }
+    func openNextController(){
+        
+        
+        
+        if CLLocationManager.locationServicesEnabled() {
+            switch(CLLocationManager.authorizationStatus()) {
+            case .notDetermined, .restricted, .denied:
+                let locationReq = LocationRequestViewController(nibName: "LocationRequestViewController", bundle: nil)
+                
+                
+                window?.rootViewController = locationReq
+                
+                
+            case .authorizedAlways, .authorizedWhenInUse:
+                let homeTabBarVC = HomeTabBarViewController(nibName: "HomeTabBarViewController", bundle: nil)
+                window?.rootViewController = homeTabBarVC
+                
+                
+            }
+        } else {
+            print("Location services are not enabled")
+            let locationReq = LocationRequestViewController(nibName: "LocationRequestViewController", bundle: nil)
+            
+            window?.rootViewController = locationReq
+            
+        }
+        
+        
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

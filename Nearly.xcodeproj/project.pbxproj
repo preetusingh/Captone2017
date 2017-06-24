@@ -27,6 +27,8 @@
 		02B17B6A1F03079400FB8A8F /* LeftPaddedTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B17B691F03079400FB8A8F /* LeftPaddedTextField.swift */; };
 		02B17B6E1F03086000FB8A8F /* POIViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B17B6C1F03086000FB8A8F /* POIViewCell.swift */; };
 		02B17B6F1F03086000FB8A8F /* POIViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B17B6D1F03086000FB8A8F /* POIViewCell.xib */; };
+		02B17B731F03086000FB8A8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B17B711F03086000FB8A8F /* DetailViewController.swift */; };
+		02B17B741F03086000FB8A8F /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B17B721F03086000FB8A8F /* DetailViewController.xib */; };
 		02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */; };
 		02DB733A1EF08FF000C5C467 /* LocationRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */; };
 		02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB733C1EF0944D00C5C467 /* HomeTabBarViewController.swift */; };
@@ -64,6 +66,8 @@
 		02B17B691F03079400FB8A8F /* LeftPaddedTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftPaddedTextField.swift; sourceTree = "<group>"; };
 		02B17B6C1F03086000FB8A8F /* POIViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POIViewCell.swift; sourceTree = "<group>"; };
 		02B17B6D1F03086000FB8A8F /* POIViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POIViewCell.xib; sourceTree = "<group>"; };
+		02B17B711F03086000FB8A8F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		02B17B721F03086000FB8A8F /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
 		02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRequestViewController.swift; sourceTree = "<group>"; };
 		02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationRequestViewController.xib; sourceTree = "<group>"; };
 		02DB733C1EF0944D00C5C467 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -148,6 +152,7 @@
 		024AE2901EE71D7D00444E7F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02B17B701F03086000FB8A8F /* DetailViewController */,
 				02B17B6B1F03083400FB8A8F /* POICell */,
 				02B17B681F03077200FB8A8F /* LeftPaddedTextFeild */,
 				02B17B631F0300B900FB8A8F /* LocationCell */,
@@ -222,6 +227,15 @@
 				02B17B6D1F03086000FB8A8F /* POIViewCell.xib */,
 			);
 			name = POICell;
+			sourceTree = "<group>";
+		};
+		02B17B701F03086000FB8A8F /* DetailViewController */ = {
+			isa = PBXGroup;
+			children = (
+				02B17B711F03086000FB8A8F /* DetailViewController.swift */,
+				02B17B721F03086000FB8A8F /* DetailViewController.xib */,
+			);
+			name = DetailViewController;
 			sourceTree = "<group>";
 		};
 		02DB73361EF08FCC00C5C467 /* Location */ = {
@@ -352,6 +366,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DB734E1EF096AB00C5C467 /* ProfileViewController.xib in Resources */,
+				02B17B741F03086000FB8A8F /* DetailViewController.xib in Resources */,
 				024AE2851EE71D5100444E7F /* LaunchScreen.storyboard in Resources */,
 				02DB733F1EF0944D00C5C467 /* HomeTabBarViewController.xib in Resources */,
 				024AE2821EE71D5100444E7F /* Assets.xcassets in Resources */,
@@ -430,6 +445,7 @@
 				02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */,
 				02AF5CED1EF9F45400FB8E01 /* GooglePlacesServer.swift in Sources */,
 				02DB73431EF0964A00C5C467 /* HomeFeedViewController.swift in Sources */,
+				02B17B731F03086000FB8A8F /* DetailViewController.swift in Sources */,
 				02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */,
 				02B17B6A1F03079400FB8A8F /* LeftPaddedTextField.swift in Sources */,
 				02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */,
@@ -564,7 +580,7 @@
 				DEVELOPMENT_TEAM = 76BC6YJE4F;
 				INFOPLIST_FILE = Nearly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dhara.Nearly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xHere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -578,7 +594,7 @@
 				DEVELOPMENT_TEAM = 76BC6YJE4F;
 				INFOPLIST_FILE = Nearly/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Dhara.Nearly;
+				PRODUCT_BUNDLE_IDENTIFIER = com.xHere;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

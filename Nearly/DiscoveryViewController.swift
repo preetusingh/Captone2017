@@ -376,10 +376,10 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
         
         let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
         cell.startSelectedAnimation(completion: { (selectedCell:LocationCollectionViewCell) in
-            let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
-            detailVC.location = self.locations?[indexPath.row]
-            detailVC.viewControllerMode = .posting
-            self.navigationController?.pushViewController(detailVC, animated: true)
+           // let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+           // detailVC.location = self.locations?[indexPath.row]
+          //  detailVC.viewControllerMode = .posting
+          //  self.navigationController?.pushViewController(detailVC, animated: true)
         })
         
         
