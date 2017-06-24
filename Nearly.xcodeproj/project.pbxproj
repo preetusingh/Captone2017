@@ -29,6 +29,10 @@
 		02B17B6F1F03086000FB8A8F /* POIViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B17B6D1F03086000FB8A8F /* POIViewCell.xib */; };
 		02B17B731F03086000FB8A8F /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B17B711F03086000FB8A8F /* DetailViewController.swift */; };
 		02B17B741F03086000FB8A8F /* DetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B17B721F03086000FB8A8F /* DetailViewController.xib */; };
+		02B17B7E1F03086000FB8A8F /* CarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B17B7C1F03086000FB8A8F /* CarouselViewController.swift */; };
+		02B17B7F1F03086000FB8A8F /* CarouselViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02B17B7D1F03086000FB8A8F /* CarouselViewController.xib */; };
+		02B17B811F03086000FB8A8F /* Bounty.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B17B801F03086000FB8A8F /* Bounty.swift */; };
+		02B17B841F03086000FB8A8F /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02B17B831F03086000FB8A8F /* Server.swift */; };
 		02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */; };
 		02DB733A1EF08FF000C5C467 /* LocationRequestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */; };
 		02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02DB733C1EF0944D00C5C467 /* HomeTabBarViewController.swift */; };
@@ -68,6 +72,10 @@
 		02B17B6D1F03086000FB8A8F /* POIViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = POIViewCell.xib; sourceTree = "<group>"; };
 		02B17B711F03086000FB8A8F /* DetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		02B17B721F03086000FB8A8F /* DetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailViewController.xib; sourceTree = "<group>"; };
+		02B17B7C1F03086000FB8A8F /* CarouselViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CarouselViewController.swift; sourceTree = "<group>"; };
+		02B17B7D1F03086000FB8A8F /* CarouselViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CarouselViewController.xib; sourceTree = "<group>"; };
+		02B17B801F03086000FB8A8F /* Bounty.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Bounty.swift; sourceTree = "<group>"; };
+		02B17B831F03086000FB8A8F /* Server.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
 		02DB73371EF08FF000C5C467 /* LocationRequestViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocationRequestViewController.swift; sourceTree = "<group>"; };
 		02DB73381EF08FF000C5C467 /* LocationRequestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LocationRequestViewController.xib; sourceTree = "<group>"; };
 		02DB733C1EF0944D00C5C467 /* HomeTabBarViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeTabBarViewController.swift; sourceTree = "<group>"; };
@@ -119,6 +127,7 @@
 		024AE2791EE71D5100444E7F /* Nearly */ = {
 			isa = PBXGroup;
 			children = (
+				02B17B821F03086000FB8A8F /* Server */,
 				024AE2901EE71D7D00444E7F /* Controller */,
 				024AE28F1EE71D7800444E7F /* View */,
 				024AE28C1EE71D5900444E7F /* Model */,
@@ -138,6 +147,7 @@
 				024AE28D1EE71D6D00444E7F /* User.swift */,
 				02AF5CE91EF9F3B900FB8E01 /* POI.swift */,
 				02AF5CF31EF9F45400FB8E01 /* GeoPoint.swift */,
+				02B17B801F03086000FB8A8F /* Bounty.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -152,6 +162,7 @@
 		024AE2901EE71D7D00444E7F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02B17B7B1F03086000FB8A8F /* Carousel */,
 				02B17B701F03086000FB8A8F /* DetailViewController */,
 				02B17B6B1F03083400FB8A8F /* POICell */,
 				02B17B681F03077200FB8A8F /* LeftPaddedTextFeild */,
@@ -236,6 +247,23 @@
 				02B17B721F03086000FB8A8F /* DetailViewController.xib */,
 			);
 			name = DetailViewController;
+			sourceTree = "<group>";
+		};
+		02B17B7B1F03086000FB8A8F /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				02B17B7C1F03086000FB8A8F /* CarouselViewController.swift */,
+				02B17B7D1F03086000FB8A8F /* CarouselViewController.xib */,
+			);
+			name = Carousel;
+			sourceTree = "<group>";
+		};
+		02B17B821F03086000FB8A8F /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				02B17B831F03086000FB8A8F /* Server.swift */,
+			);
+			name = Server;
 			sourceTree = "<group>";
 		};
 		02DB73361EF08FCC00C5C467 /* Location */ = {
@@ -373,6 +401,7 @@
 				02DB73491EF0967C00C5C467 /* DiscoveryViewController.xib in Resources */,
 				024AE2801EE71D5100444E7F /* Main.storyboard in Resources */,
 				02DB73441EF0964A00C5C467 /* HomeFeedViewController.xib in Resources */,
+				02B17B7F1F03086000FB8A8F /* CarouselViewController.xib in Resources */,
 				02B17B6F1F03086000FB8A8F /* POIViewCell.xib in Resources */,
 				02DB733A1EF08FF000C5C467 /* LocationRequestViewController.xib in Resources */,
 				024AE2981EE721BD00444E7F /* loginInputView.xib in Resources */,
@@ -442,11 +471,14 @@
 				024AE28E1EE71D6D00444E7F /* User.swift in Sources */,
 				02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */,
 				02AF5CF41EF9F45400FB8E01 /* GeoPoint.swift in Sources */,
+				02B17B7E1F03086000FB8A8F /* CarouselViewController.swift in Sources */,
+				02B17B841F03086000FB8A8F /* Server.swift in Sources */,
 				02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */,
 				02AF5CED1EF9F45400FB8E01 /* GooglePlacesServer.swift in Sources */,
 				02DB73431EF0964A00C5C467 /* HomeFeedViewController.swift in Sources */,
 				02B17B731F03086000FB8A8F /* DetailViewController.swift in Sources */,
 				02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */,
+				02B17B811F03086000FB8A8F /* Bounty.swift in Sources */,
 				02B17B6A1F03079400FB8A8F /* LeftPaddedTextField.swift in Sources */,
 				02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */,
 				02DB734D1EF096AB00C5C467 /* ProfileViewController.swift in Sources */,
