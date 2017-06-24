@@ -9,12 +9,42 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>Bolts.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Facebook-iOS-SDK.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Font-Awesome-Swift-Font-Awesome-Swift.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
 		<key>Font-Awesome-Swift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Fusuma.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>PBJVision.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Parse.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>ParseFacebookUtils.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -52,17 +82,42 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>1DEC0318F5E5F19BF659E849CABA927D</key>
+		<key>0249F1CCD6CA272BB3BF7B840F509A3D</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>3DD94978965E27AF1FC88F17E4E74644</key>
+		<key>29C9BB665B25BD26BFC36E1CEB4BD769</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>4501EB8CB7ED655208E94630240DDE66</key>
+		<key>3E0D8640A124012AB6F0A9F775A38285</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>44CAD6CE523055ED339E87154473A254</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5559472C2F56D6B0797B4F80DF799901</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>5D91BFECD846274AAF212185C9D64503</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>83C1F297407AB0B1EB7FD60FEE29E76C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>864718B47A2FD7EF55D708554A9E255A</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -72,7 +127,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>9EDA7A3BCDDB6A59BD377BB3E9F940C8</key>
+		<key>992FCB214BBCC8869FE1004A358BC3CE</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -87,7 +142,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF2BE7D15BC43B19C4A211887F717F60</key>
+		<key>C02E86941A7E03C4304EBCFC7DDB5077</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CAA2CFB1B0A3BD8DAA556B81A3C3D4C3</key>
 		<dict>
 			<key>primary</key>
 			<true/>

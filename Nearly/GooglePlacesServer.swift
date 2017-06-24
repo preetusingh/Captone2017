@@ -8,6 +8,7 @@
 
 import UIKit
 import MapKit
+import Parse
 class GooglePlacesServer: NSObject {
     
     static let sharedInstance = GooglePlacesServer()

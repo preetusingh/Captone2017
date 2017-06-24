@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = 'CF2BE7D15BC43B19C4A211887F717F60'
+               BlueprintIdentifier = '864718B47A2FD7EF55D708554A9E255A'
                BlueprintName = 'STLocationRequest-STLocationRequest'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'STLocationRequest.bundle'>

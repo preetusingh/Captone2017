@@ -14,8 +14,24 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
+  - Bolts (1.8.4):
+    - Bolts/AppLinks (= 1.8.4)
+    - Bolts/Tasks (= 1.8.4)
+  - Bolts/AppLinks (1.8.4):
+    - Bolts/Tasks
+  - Bolts/Tasks (1.8.4)
+  - Facebook-iOS-SDK (3.24.4):
+    - Bolts (~> 1.2)
   - Font-Awesome-Swift (1.6.2)
+  - Fusuma (1.1.0)
   - iCarousel (1.8.3)
+  - Parse (1.15.0):
+    - Bolts/Tasks (~> 1.8)
+  - ParseFacebookUtils (1.10.0):
+    - Bolts/Tasks (~> 1.5)
+    - Facebook-iOS-SDK (~> 3.24)
+    - Parse (~> 1.9)
+  - PBJVision (0.5.2)
   - STLocationRequest (1.4.0):
     - Font-Awesome-Swift (~> 1.6.1)
   - SVProgressHUD (2.1.2)
@@ -23,19 +39,29 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking (~> 3.0)
+  - Fusuma
   - iCarousel
+  - Parse
+  - ParseFacebookUtils
+  - PBJVision
   - STLocationRequest
   - SVProgressHUD
   - UITextView+Placeholder (~> 1.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
+  Bolts: 8a7995239dbe724f9cba2248b766d48b7ebdd322
+  Facebook-iOS-SDK: 5a7c414a084708220b72d5fd016f2cf3eb6deda4
   Font-Awesome-Swift: 4dc96df73b5f32aaccdee50a454c3ec253ee4977
+  Fusuma: 087dcf57cd0e8712d357dcf14559927da369642c
   iCarousel: d782f635afac190c49bb8ee455882284cff8b85f
+  Parse: c0519f8fbf57bd0334f75cd22ac032d86ee55464
+  ParseFacebookUtils: 7030f53c989fda36ad50029d90edec1327424317
+  PBJVision: 7aef9687e799700f62f74e9991aff7bf2075f5c3
   STLocationRequest: 48e788990a914701dd556fec84bf740a6cffb1c4
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
   UITextView+Placeholder: 77680995fcdd07c3f52ec92fe1150874a2ac89ff
 
-PODFILE CHECKSUM: 318f9802a1e64469b916ebc375db3f0d78179e36
+PODFILE CHECKSUM: 767dac6bffd322df7e201d5f9daeabe64f084ddb
 
 COCOAPODS: 1.2.0

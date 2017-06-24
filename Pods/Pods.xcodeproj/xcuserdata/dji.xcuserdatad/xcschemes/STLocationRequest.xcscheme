@@ -14,7 +14,7 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '3DD94978965E27AF1FC88F17E4E74644'
+               BlueprintIdentifier = '5D91BFECD846274AAF212185C9D64503'
                BlueprintName = 'STLocationRequest'
                ReferencedContainer = 'container:Pods.xcodeproj'
                BuildableName = 'STLocationRequest.framework'>

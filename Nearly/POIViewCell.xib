@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="148" id="vSb-Ic-T7k" customClass="POIViewCell" customModule="xHere" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="148"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="vSb-Ic-T7k" id="fxe-4d-jn7">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="147"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Starbuck Sunnyvale Main street Ca hello fdhg h jfhgjsfghkshgmsg ksg jh jsgd" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7FI-if-F7F">
+                        <rect key="frame" x="8" y="8" width="558" height="21"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="9UM-xf-N6K">
+                        <rect key="frame" x="8" y="37" width="304" height="110"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="110" id="JvO-ah-XQU"/>
+                        </constraints>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="7FI-if-F7F" firstAttribute="leading" secondItem="fxe-4d-jn7" secondAttribute="leading" constant="8" id="3d3-iA-jJJ"/>
+                    <constraint firstItem="9UM-xf-N6K" firstAttribute="top" secondItem="7FI-if-F7F" secondAttribute="bottom" constant="8" id="BqT-fM-q4N"/>
+                    <constraint firstAttribute="bottom" secondItem="9UM-xf-N6K" secondAttribute="bottom" id="FkX-Ve-pRd"/>
+                    <constraint firstItem="9UM-xf-N6K" firstAttribute="leading" secondItem="fxe-4d-jn7" secondAttribute="leading" constant="8" id="KJh-wK-jYC"/>
+                    <constraint firstAttribute="trailing" secondItem="9UM-xf-N6K" secondAttribute="trailing" constant="8" id="TFP-3r-cOy"/>
+                    <constraint firstItem="7FI-if-F7F" firstAttribute="top" secondItem="fxe-4d-jn7" secondAttribute="top" constant="8" id="zhi-kg-wmT"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="placeImageView" destination="9UM-xf-N6K" id="doh-e8-yd7"/>
+                <outlet property="placeNameLabel" destination="7FI-if-F7F" id="PaB-1s-P3r"/>
+            </connections>
+            <point key="canvasLocation" x="130" y="106"/>
+        </tableViewCell>
+    </objects>
+</document>

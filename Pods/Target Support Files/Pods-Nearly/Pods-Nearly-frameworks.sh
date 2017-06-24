@@ -90,7 +90,13 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Bolts/Bolts.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Facebook-iOS-SDK/FacebookSDK.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Font-Awesome-Swift/Font_Awesome_Swift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Fusuma/Fusuma.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PBJVision/PBJVision.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Parse/Parse.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ParseFacebookUtils/ParseFacebookUtils.framework"
   install_framework "$BUILT_PRODUCTS_DIR/STLocationRequest/STLocationRequest.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/UITextView+Placeholder/UITextView_Placeholder.framework"
@@ -98,7 +104,13 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "$BUILT_PRODUCTS_DIR/AFNetworking/AFNetworking.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Bolts/Bolts.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Facebook-iOS-SDK/FacebookSDK.framework"
   install_framework "$BUILT_PRODUCTS_DIR/Font-Awesome-Swift/Font_Awesome_Swift.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Fusuma/Fusuma.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/PBJVision/PBJVision.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/Parse/Parse.framework"
+  install_framework "$BUILT_PRODUCTS_DIR/ParseFacebookUtils/ParseFacebookUtils.framework"
   install_framework "$BUILT_PRODUCTS_DIR/STLocationRequest/STLocationRequest.framework"
   install_framework "$BUILT_PRODUCTS_DIR/SVProgressHUD/SVProgressHUD.framework"
   install_framework "$BUILT_PRODUCTS_DIR/UITextView+Placeholder/UITextView_Placeholder.framework"

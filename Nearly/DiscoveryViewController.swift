@@ -6,26 +6,28 @@
 //  Copyright © 2017 Nearly. All rights reserved.
 //
 
+
+
 import UIKit
 import MapKit
+import Parse
 import SVProgressHUD
-
-
 let kTabbarHeight:Int = 0
 let selectedPinImage = UIImage(named: "pinselected")
 let pinImage = UIImage(named: "pin")
 
 class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate,MKMapViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,UICollectionViewDelegateFlowLayout,UITextFieldDelegate {
     
-    @IBOutlet weak var searchTextField: UITextField!
+    @IBOutlet weak var searchTextField: LeftPaddedTextField!
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var autoCompleteTableView: UITableView!
     @IBOutlet weak var mapView: MKMapView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     @IBOutlet weak var collectionViewBottomConstraint: NSLayoutConstraint!
     @IBOutlet weak var collectionViewHeightConstraint: NSLayoutConstraint!
-    var currentLocation : CLLocationCoordinate2D!
-    var locations : [GeoPoint]?
+    var currentLocation : PFGeoPoint!
+    var locations : [POI]?
     var autoComplete : [POI]?
     
     @IBOutlet weak var currentLocationButton: UIButton!
@@ -222,13 +224,7 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        //        if(tableView==self.tableView){
-        //            let neabyBountiesViewController = NeabyBountiesViewController(nibName: "NeabyBountiesViewController", bundle: nil)
-        //            neabyBountiesViewController.location = self.locations?[indexPath.row]
-        //            self.navigationController?.pushViewController(neabyBountiesViewController, animated: true)
-        //        }else{
-        
-        SVProgressHUD.show()
+              SVProgressHUD.show()
         let location = autoComplete?[indexPath.row]
         GooglePlacesServer.geocodeAddressString((location?.placeDescription)!, completion: { (placemark, error) -> Void in
             if (placemark?.location?.coordinate) != nil {
@@ -251,7 +247,16 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
     // MARK: - Search Bar delegate
     
     
-    
+    @IBAction func onCurrentLocationClick(_ sender: UIButton) {
+        self.searchTextField.text = ""
+        PFGeoPoint.geoPointForCurrentLocation { (loc :PFGeoPoint?, error :Error?) in
+            if error == nil{
+                self.currentLocation = loc
+                self.setUpMapView()
+                self.getNearbyLocations(geoPoint: self.currentLocation)
+            }
+        }
+    }
     @IBAction func seachTextChanged(_ sender: UITextField) {
         autoCompleteTableView.isHidden = false
         fetchLocationsWithPlace(searchText: sender.text!)
@@ -282,6 +287,7 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
     func searchBarCancelButtonClicked(_ searchBar: UISearchBar){
         
         self.getNearbyLocations(geoPoint: currentLocation)
+        self.searchBar.text = ""
         autoCompleteTableView.isHidden = true
         self.view.endEditing(true)
     }
@@ -313,7 +319,7 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         
     }
-    func getNearbyLocations(geoPoint : GeoPoint){
+    func getNearbyLocations(geoPoint : PFGeoPoint){
         
         SVProgressHUD.show()
         GooglePlacesServer.sharedInstance.getLocationBy(
@@ -354,7 +360,143 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
         }
     }
     
+    // MARK: - Collection view delegate
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        
+        if self.locations != nil{
+            return self.locations!.count
+        }else{
+            return 0
+        }
+    }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
+        cell.startSelectedAnimation(completion: { (selectedCell:LocationCollectionViewCell) in
+            let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+            detailVC.location = self.locations?[indexPath.row]
+            detailVC.viewControllerMode = .posting
+            self.navigationController?.pushViewController(detailVC, animated: true)
+        })
+        
+        
+    }
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        
+        let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "LocationCollectionViewCell", for: indexPath) as! LocationCollectionViewCell
+        cell.location = self.locations?[indexPath.row]
+        
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+        _ = cell as! LocationCollectionViewCell
+        //collectionCell.imageView.layer.cornerRadius = collectionCell.bounds.size.height/2
+        
+        
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        
+        let cellSize = CGSize(width: collectionView.bounds.size.width-80, height: collectionView.bounds.size.height-20)
+        
+        return cellSize
+    }
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets{
+        
+        return UIEdgeInsetsMake(10,10,10,10)
+    }
+    
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        if(self.collectionView != nil){
+            var insets = self.collectionView.contentInset
+            let value = (self.view.frame.size.width - (self.collectionView.collectionViewLayout as! UICollectionViewFlowLayout).itemSize.width) * 0.5
+            insets.left = value
+            insets.right = value
+            self.collectionView.contentInset = insets
+            self.collectionView.decelerationRate = UIScrollViewDecelerationRateFast;
+        }
+        
+    }
+    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
+        var visibleRect = CGRect()
+        
+        visibleRect.origin = collectionView.contentOffset
+        visibleRect.size = collectionView.bounds.size
+        
+        let visiblePoint = CGPoint(x: visibleRect.midX, y: visibleRect.midY)
+        
+        let visibleIndexPath: IndexPath = collectionView.indexPathForItem(at: visiblePoint)!
+        
+        print("Visible indexpath \(visibleIndexPath)")
+        
+        let location = self.locations?[visibleIndexPath.row]
+        
+        //        let latitude:CLLocationDegrees = (location?.latitute)!
+        //
+        //        let longitude:CLLocationDegrees = (location?.longitude)!
+        //
+        //        let latDelta:CLLocationDegrees = 0.008
+        //
+        //        let lonDelta:CLLocationDegrees = 0.008
+        //
+        //        let span = MKCoordinateSpanMake(latDelta, lonDelta)
+        //
+        //        let locationCord = CLLocationCoordinate2DMake(latitude, longitude)
+        //
+        //        let region = MKCoordinateRegionMake(locationCord, span)
+        
+        
+        
+        
+        
+        self.highlightPin(indexRow: visibleIndexPath.row)
+        
+        
+        //mapView.setRegion(region, animated: true )
+    }
+    
+    func highlightPin(indexRow:Int){
+        
+        for annotation in mapView.annotations {
+            
+            
+            let viewI = mapView.view(for: annotation)
+            
+            let pTitle = annotation.subtitle
+            //print(annotation.title)
+            if pTitle != nil && viewI != nil{
+                
+                if viewI?.annotation is MKUserLocation
+                {
+                    
+                }else{
+                    
+                    
+                    let index = Int.init(pTitle!!)
+                    if(index!-1 == indexRow){
+                        print("Selected pin is \(pTitle) : \(annotation.title)")
+                        DispatchQueue.main.async{
+                            viewI?.image = selectedPinImage
+                        }
+                        self.mapView.selectAnnotation(annotation, animated: true)
+                        
+                    }else{
+                        DispatchQueue.main.async{
+                            viewI?.image = pinImage
+                        }
+                    }
+                }
+                
+                
+            }
+        }
+    }
     
     /*
      // MARK: - Navigation
