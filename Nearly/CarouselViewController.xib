@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CarouselViewController" customModule="Nearly" customModuleProvider="target"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="xrg-9J-o3x">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="CarouselBackGround" translatesAutoresizingMaskIntoConstraints="NO" id="YJv-Rb-SYW">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0wM-be-ycX" customClass="iCarousel">
+                    <rect key="frame" x="-13" y="124" width="401" height="400"/>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="400" id="MVR-xn-tVM"/>
+                        <constraint firstAttribute="width" constant="400" id="YGb-qr-G2J"/>
+                    </constraints>
+                </view>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="0kQ-28-EbD">
+                    <rect key="frame" x="2" y="524" width="45" height="45"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="45" id="TXO-F2-1uI"/>
+                        <constraint firstAttribute="height" constant="45" id="UHj-m0-AxI"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="UserName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tu5-qU-ucZ">
+                    <rect key="frame" x="49" y="536" width="82" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="tu5-qU-ucZ" firstAttribute="centerY" secondItem="0kQ-28-EbD" secondAttribute="centerY" id="199-ae-c24"/>
+                <constraint firstItem="YJv-Rb-SYW" firstAttribute="leading" secondItem="xrg-9J-o3x" secondAttribute="leading" id="4UT-jL-tY7"/>
+                <constraint firstItem="YJv-Rb-SYW" firstAttribute="top" secondItem="xrg-9J-o3x" secondAttribute="top" id="BRx-cw-tX1"/>
+                <constraint firstAttribute="bottom" secondItem="YJv-Rb-SYW" secondAttribute="bottom" id="DYJ-Ol-MfV"/>
+                <constraint firstItem="0kQ-28-EbD" firstAttribute="top" secondItem="0wM-be-ycX" secondAttribute="bottom" id="QQx-ih-y6J"/>
+                <constraint firstItem="0wM-be-ycX" firstAttribute="centerX" secondItem="xrg-9J-o3x" secondAttribute="centerX" id="WJf-Vv-bcq"/>
+                <constraint firstItem="0wM-be-ycX" firstAttribute="centerY" secondItem="xrg-9J-o3x" secondAttribute="centerY" constant="-10" id="Xj6-ds-YHQ"/>
+                <constraint firstAttribute="trailing" secondItem="YJv-Rb-SYW" secondAttribute="trailing" id="ihr-gL-ruQ"/>
+                <constraint firstItem="tu5-qU-ucZ" firstAttribute="leading" secondItem="0kQ-28-EbD" secondAttribute="trailing" constant="2" id="qad-4m-i8U"/>
+                <constraint firstItem="0kQ-28-EbD" firstAttribute="leading" secondItem="xrg-9J-o3x" secondAttribute="leading" constant="2" id="sEg-fo-M9T"/>
+            </constraints>
+            <point key="canvasLocation" x="35.5" y="103.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="CarouselBackGround" width="50" height="468"/>
+    </resources>
+</document>
