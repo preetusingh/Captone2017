@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import AFNetworking
+
 let placeholderImage = UIImage(named: "NoImagePlaceHolder")
 class LocationCollectionViewCell: UICollectionViewCell {
     
@@ -42,8 +42,10 @@ class LocationCollectionViewCell: UICollectionViewCell {
         
         
     }
+    
     func startSelectedAnimation(completion:@escaping (LocationCollectionViewCell)->()) {
-        self.placeNameLabel.textColor = UIColor.black
+        
+        self.placeNameLabel.textColor = kYellow
         weak var weakSelf = self
         UIView.animateKeyframes(withDuration: 0.4, delay: 0, options: [],
                                 animations: {
@@ -71,6 +73,5 @@ class LocationCollectionViewCell: UICollectionViewCell {
         
         
     }
-    
 }
 

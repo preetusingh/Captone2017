@@ -121,12 +121,12 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         //Some View config
         self.postUserProfileImageView.layer.cornerRadius = self.postUserProfileImageView.frame.size.height/2
         print("     ImageViewHeight = \(self.postUserProfileImageView.frame.size.height)")
-        self.postUserProfileImageView.layer.borderColor = kXHEROrange.cgColor
+        //self.postUserProfileImageView.layer.borderColor = kXHEROrange.cgColor
         self.postUserProfileImageView.layer.borderWidth = 2
         
         self.claimUserProfileImage.layer.cornerRadius = self.claimUserProfileImage.frame.size.height/2
         self.claimUserProfileImage.layer.borderWidth = 2
-        self.claimUserProfileImage.layer.borderColor = kXHERYellow.cgColor
+       // self.claimUserProfileImage.layer.borderColor = kXHERYellow.cgColor
         
         self.claimedBountyImageView.layer.cornerRadius = 20
         //self.claimedBountyImageView.bounds.size.height/10
@@ -190,10 +190,10 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         self.userTokenResultCount.text = "\(tokenCount-1)"
         
         //Set TextView's design
-        self.bountyNoteTextView.placeholder = "What would you like to know?"
-        self.bountyNoteTextView.placeholderColor = UIColor.lightGray
+       // self.bountyNoteTextView.placeholder = "What would you like to know?"
+        //self.bountyNoteTextView.placeholderColor = UIColor.lightGray
         self.bountyNoteTextView.layer.cornerRadius = 10
-        self.bountyNoteTextView.layer.borderColor = kXHEROrange.cgColor
+       // self.bountyNoteTextView.layer.borderColor = kXHEROrange.cgColor
         self.bountyNoteTextView.layer.borderWidth = 2
         
         //Hide Claim related elements
@@ -301,7 +301,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
             
             UIView.animate(withDuration: 4,
                            animations: {
-                            weakSelf?.bountyNoteTextView.backgroundColor = kXHEROrange
+                            weakSelf?.bountyNoteTextView.backgroundColor = kOrange
             },
                            completion: { (didComplete:Bool) in
                             _ = self.navigationController?.popToRootViewController(animated: true)
@@ -374,42 +374,13 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         else
         {
-            let cameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
-            cameraViewController.currentBounty = self.currentBounty
-            self.present(cameraViewController, animated: false, completion: nil)
+            //let cameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
+            //cameraViewController.currentBounty = self.currentBounty
+            //self.present(cameraViewController, animated: false, completion: nil)
         }
     }
     
-    //Debugging Image picker return with Image
-    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let size = CGSize(width: 400, height: 400)
-        let claimedImage = resize(image: (info[UIImagePickerControllerOriginalImage] as? UIImage)!, newSize: size)
         
-        let claimController = ClaimViewController()
-        claimController.bounty = self.currentBounty
-        claimController.claimingImage =  claimedImage
-        
-        
-        self.dismiss(animated: false) {
-            self.claimedBountyImageView.alpha = 0.0
-            self.claimedBountyImageView.image = claimedImage
-            
-            weak var weakSelf = self
-            UIView.animate(withDuration: 1.0,
-                           animations: {
-                            weakSelf?.claimedBountyImageView.alpha = 1.0
-            },
-                           completion: { (didComplete:Bool) in
-                            self.present(claimController, animated: true, completion: nil)
-                            
-            })
-            
-        }
-        
-        
-        
-    }
-    
     func resize(image: UIImage, newSize: CGSize) -> UIImage {
         let resizeImageView = UIImageView(frame: CGRect(x: 0, y: 0, width: newSize.width, height: newSize.height))
         resizeImageView.contentMode = UIViewContentMode.scaleAspectFill

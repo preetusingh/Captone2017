@@ -372,8 +372,6 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        
-        
         let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
         cell.startSelectedAnimation(completion: { (selectedCell:LocationCollectionViewCell) in
             let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
@@ -381,6 +379,8 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
             detailVC.viewControllerMode = .posting
             self.navigationController?.pushViewController(detailVC, animated: true)
         })
+        
+
         
         
     }

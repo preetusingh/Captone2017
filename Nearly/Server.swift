@@ -12,7 +12,7 @@ import Parse
 class Server: NSObject {
     
     
-    static let sharedInstance = XHERServer()
+    static let sharedInstance = Server()
     
     
     // MARK: - Bounty API
@@ -24,7 +24,7 @@ class Server: NSObject {
     // MARK: - Fetch Bounty API by location
     
     // Find Claimed Bounty at a particular POI
-    func fetchClaimedBountyAt(poi:POI, success:@escaping ([XHERBounty]?)->(), failure:@escaping (Error?)->()) {
+    func fetchClaimedBountyAt(poi:POI, success:@escaping ([Bounty]?)->(), failure:@escaping (Error?)->()) {
         
         //Check if the POI submitted is already on the server or not.
         let duplicatePOIQuery = PFQuery(className: kPFClassPOI)
@@ -55,9 +55,9 @@ class Server: NSObject {
                     if let bountiesArray = bountiesArray {
                         
                         //Parse array of PFObject into Bounty
-                        var bountyArrayTyped = [XHERBounty]()
+                        var bountyArrayTyped = [Bounty]()
                         for object in bountiesArray {
-                            let bounty = object as! XHERBounty
+                            let bounty = object as! Bounty
                             
                             if let distanceFromCurrentInMiles = bounty.postedAtLocation.geoPoint?.distanceInMiles(to: poi.geoPoint) {
                                 bounty.postedAtLocation.distanceFromCurrentInMiles = distanceFromCurrentInMiles
@@ -83,11 +83,11 @@ class Server: NSObject {
     }
     
     // Find Bounty Claimed in an area
-    func fetchUnClaimedBountyNear( location:PFGeoPoint, withInMiles miles:Double, success:@escaping ([XHERBounty]?)->(), failure:@escaping (Error?)->()) {
+    func fetchUnClaimedBountyNear( location:PFGeoPoint, withInMiles miles:Double, success:@escaping ([Bounty]?)->(), failure:@escaping (Error?)->()) {
         
         fetchBountyNear(location: location, withInMiles: miles, thatIsClaimed: false,
                         
-                        success: { (bountiesArray:[XHERBounty]?) in
+                        success: { (bountiesArray:[Bounty]?) in
                             success(bountiesArray)
         },
                         failure: { (error:Error?) in
@@ -95,10 +95,10 @@ class Server: NSObject {
         })
     }
     
-    func fetchClaimedBountyNear( location:PFGeoPoint,withInMiles miles:Double, success:@escaping ([XHERBounty]?)->(), failure:@escaping (Error?)->()) {
+    func fetchClaimedBountyNear( location:PFGeoPoint,withInMiles miles:Double, success:@escaping ([Bounty]?)->(), failure:@escaping (Error?)->()) {
         
         fetchBountyNear(location: location, withInMiles: miles, thatIsClaimed: true,
-                        success: { (bountiesArray:[XHERBounty]?) in
+                        success: { (bountiesArray:[Bounty]?) in
                             success(bountiesArray)
         },
                         failure: { (error:Error?) in
@@ -106,7 +106,7 @@ class Server: NSObject {
         })
     }
     
-    private func fetchBountyNear( location:PFGeoPoint, withInMiles miles:Double, thatIsClaimed isClaimed:Bool, success:@escaping ([XHERBounty]?)->(), failure:@escaping (Error?)->()) {
+    private func fetchBountyNear( location:PFGeoPoint, withInMiles miles:Double, thatIsClaimed isClaimed:Bool, success:@escaping ([Bounty]?)->(), failure:@escaping (Error?)->()) {
         
         let bountyQuery = PFQuery(className: kPFClassBounty)
         bountyQuery.whereKey(kPFKeyGeoPoint, nearGeoPoint: location, withinMiles: miles)
@@ -122,9 +122,9 @@ class Server: NSObject {
             if error == nil {
                 
                 if let bountiesArray = bountiesArray {
-                    var bountyArrayTyped = [XHERBounty]()
+                    var bountyArrayTyped = [Bounty]()
                     for object in bountiesArray {
-                        let bounty = object as! XHERBounty
+                        let bounty = object as! Bounty
                         
                         if let distanceFromCurrentInMiles = bounty.bountyGeoPoint?.distanceInMiles(to: location) {
                             bounty.distanceFromCurrentInMiles = distanceFromCurrentInMiles
@@ -154,10 +154,10 @@ class Server: NSObject {
     // MARK: - Fetch Bounty baseed by User
     
     // Find Bounty claimed by User
-    func fetchBountyEarneddBy(user:User, success:@escaping ([XHERBounty]?)->(), failure:@escaping (Error?)->()) {
+    func fetchBountyEarneddBy(user:User, success:@escaping ([Bounty]?)->(), failure:@escaping (Error?)->()) {
         
         fetchRelatedTo(user: user, byPostEarned: .claimed,
-                       success: { (bountiesArray:[XHERBounty]?) in
+                       success: { (bountiesArray:[Bounty]?) in
                         
                         success(bountiesArray)
         },
@@ -169,10 +169,10 @@ class Server: NSObject {
     }
     
     // Find Bounty posted by user
-    func fetchBountyPostedBy(user:User, success:@escaping ([XHERBounty]?)->(), failure:@escaping (Error?)->()) {
+    func fetchBountyPostedBy(user:User, success:@escaping ([Bounty]?)->(), failure:@escaping (Error?)->()) {
         
         fetchRelatedTo(user: user, byPostEarned: .postBy,
-                       success: { (bountiesArray:[XHERBounty]?) in
+                       success: { (bountiesArray:[Bounty]?) in
                         
                         success(bountiesArray)
         },
@@ -183,7 +183,7 @@ class Server: NSObject {
     }
     
     // Find Bounty posted by User
-    func fetchRelatedTo(user:User,byPostEarned postOrEarned:PostOrClaimed,  success:@escaping ([XHERBounty]?)->(), failure:@escaping (Error?)->()) {
+    func fetchRelatedTo(user:User,byPostEarned postOrEarned:PostOrClaimed,  success:@escaping ([Bounty]?)->(), failure:@escaping (Error?)->()) {
         
         let bountyQuery = PFQuery(className: kPFClassBounty)
         bountyQuery.whereKey(postOrEarned.rawValue, equalTo: user)
@@ -201,9 +201,9 @@ class Server: NSObject {
                 if let bountiesArray = bountiesArray {
                     
                     //Parse array of PFObject into Bounty
-                    var bountyArrayTyped = [XHERBounty]()
+                    var bountyArrayTyped = [Bounty]()
                     for object in bountiesArray {
-                        let bounty = object as! XHERBounty
+                        let bounty = object as! Bounty
                         print("fetchRelatedTo POI Name\(bounty.postedAtLocation.placeName)")
                         bountyArrayTyped.append(bounty)
                     }
@@ -227,7 +227,7 @@ class Server: NSObject {
     
     func postBountyBy(user:User, withNote note:String, atPOI poi:POI, withTokenValue value:Int, success:@escaping ()->(), failure:@escaping ()->()) {
         
-        let newBounty = XHERBounty()
+        let newBounty = Bounty()
         
         //Set byUser
         newBounty.postedByUser = user
@@ -288,7 +288,7 @@ class Server: NSObject {
     }
     
     //MARK claimBounty
-    func claimBounty(user : User, objectId: String, image: UIImage, success : @escaping (XHERBounty, Int) -> (), faliure : @escaping (Error) -> ()){
+    func claimBounty(user : User, objectId: String, image: UIImage, success : @escaping (Bounty, Int) -> (), faliure : @escaping (Error) -> ()){
         
         
         let query = PFQuery(className:kPFClassBounty)
@@ -296,7 +296,7 @@ class Server: NSObject {
         
         query.getObjectInBackground(withId: objectId) { (bountyObject : PFObject?, error: Error?) in
             if error == nil {
-                let bounty = bountyObject as! XHERBounty
+                let bounty = bountyObject as! Bounty
                 
                 
                 self.uploadContent(withImage: image, success: { (media: Media) in
@@ -328,12 +328,12 @@ class Server: NSObject {
     //        print("BEGIN GETTING LOCATION")
     //        PFGeoPoint.geoPointForCurrentLocation { (currentLocation:PFGeoPoint?, error:Error?) in
     //            if let error = error {
-    //                print("XHERServer.uploadContent() currentLocation fetch failed = \(error.localizedDescription)")
+    //                print("Server.uploadContent() currentLocation fetch failed = \(error.localizedDescription)")
     //                failure()
     //            }
     //            else {
     //
-    //                let newBounty = XHERBounty()
+    //                let newBounty = Bounty()
     //
     //                //Set byUser
     //                newBounty.postedByUser = user
@@ -428,7 +428,7 @@ class Server: NSObject {
         PFGeoPoint.geoPointForCurrentLocation { (currentLocation:PFGeoPoint?, error:Error?) in
             
             if let error = error {
-                print("XHERServer.uploadContent() currentLocation fetch failed = \(error.localizedDescription)")
+                print("Server.uploadContent() currentLocation fetch failed = \(error.localizedDescription)")
                 failure()
             }
             else {
