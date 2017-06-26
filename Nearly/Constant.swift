@@ -12,7 +12,6 @@ import UIKit
 let kYellow = UIColor(red: 250/255, green: 225/255, blue: 30/255, alpha: 1)
 let kOrange = UIColor(red: 255/255, green: 140/255, blue: 0/255, alpha: 1)
 
-
 let kPFClassContent = "Content"
 
 // Mark: - User Class

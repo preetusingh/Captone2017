@@ -1,12 +1,13 @@
 //
-//  DiscoveryViewController.swift
+//  Discovery1ViewController.swift
 //  Nearly
 //
-//  Created by Dhara's Mac on 6/13/17.
+//  Created by Dhara's Mac on 6/25/17.
 //  Copyright © 2017 Nearly. All rights reserved.
 //
 
 
+ 
 
 import UIKit
 import MapKit
@@ -16,7 +17,7 @@ let kTabbarHeight:Int = 0
 let selectedPinImage = UIImage(named: "pinselected")
 let pinImage = UIImage(named: "pin")
 
-class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate,MKMapViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,UICollectionViewDelegateFlowLayout,UITextFieldDelegate {
+class Discovery1ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource,UISearchBarDelegate,MKMapViewDelegate,UICollectionViewDataSource,UICollectionViewDelegate,UIScrollViewDelegate,UICollectionViewDelegateFlowLayout,UITextFieldDelegate {
     
     @IBOutlet weak var searchTextField: LeftPaddedTextField!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -224,7 +225,13 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
     }
     public func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-              SVProgressHUD.show()
+        //        if(tableView==self.tableView){
+        //            let neabyBountiesViewController = NeabyBountiesViewController(nibName: "NeabyBountiesViewController", bundle: nil)
+        //            neabyBountiesViewController.location = self.locations?[indexPath.row]
+        //            self.navigationController?.pushViewController(neabyBountiesViewController, animated: true)
+        //        }else{
+        
+        SVProgressHUD.show()
         let location = autoComplete?[indexPath.row]
         GooglePlacesServer.geocodeAddressString((location?.placeDescription)!, completion: { (placemark, error) -> Void in
             if (placemark?.location?.coordinate) != nil {
@@ -372,15 +379,20 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
-        cell.startSelectedAnimation(completion: { (selectedCell:LocationCollectionViewCell) in
-            let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
-            detailVC.location = self.locations?[indexPath.row]
-            detailVC.viewControllerMode = .posting
-            self.navigationController?.pushViewController(detailVC, animated: true)
-        })
         
-
+        //        let neabyBountiesViewController = NeabyBountiesViewController(nibName: "NeabyBountiesViewController", bundle: nil)
+        //        neabyBountiesViewController.location = self.locations?[indexPath.row]
+        //        self.navigationController?.pushViewController(neabyBountiesViewController, animated: true)
+        
+        
+        
+        let cell = collectionView.cellForItem(at: indexPath) as! LocationCollectionViewCell
+//        cell.startSelectedAnimation(completion: { (selectedCell:LocationCollectionViewCell) in
+//            let detailVC = DetailViewController(nibName: "DetailViewController", bundle: nil)
+//            detailVC.location = self.locations?[indexPath.row]
+//            detailVC.viewControllerMode = .posting
+//            self.navigationController?.pushViewController(detailVC, animated: true)
+//        })
         
         
     }
@@ -509,3 +521,4 @@ class DiscoveryViewController: UIViewController, UITableViewDelegate, UITableVie
      */
     
 }
+

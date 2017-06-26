@@ -2,12 +2,11 @@
 //  LocationCollectionViewCell.swift
 //  Nearly
 //
-//  Created by Dhara's Mac on 6/27/17.
+//  Created by Dhara's Mac on 6/25/17.
 //  Copyright © 2017 Nearly. All rights reserved.
 //
 
 import UIKit
-
 let placeholderImage = UIImage(named: "NoImagePlaceHolder")
 class LocationCollectionViewCell: UICollectionViewCell {
     
@@ -39,37 +38,6 @@ class LocationCollectionViewCell: UICollectionViewCell {
         placeImageView.layer.shadowOpacity = 1
         placeImageView.layer.shadowOffset = CGSize(width: 1.0, height: 2.0)
         placeImageView.layer.shadowRadius = 20
-        
-        
-    }
-    
-    func startSelectedAnimation(completion:@escaping (LocationCollectionViewCell)->()) {
-        
-        self.placeNameLabel.textColor = kYellow
-        weak var weakSelf = self
-        UIView.animateKeyframes(withDuration: 0.4, delay: 0, options: [],
-                                animations: {
-                                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2,
-                                                       animations: {
-                                                        weakSelf?.transform = CGAffineTransform(scaleX: 0.98, y: 0.98)
-                                                        weakSelf?.placeNameLabel.transform = CGAffineTransform(scaleX: 1.1, y: 1.1)
-                                                        
-                                    })
-                                    UIView.addKeyframe(withRelativeStartTime: 0, relativeDuration: 0.2,
-                                                       animations: {
-                                                        weakSelf?.transform = CGAffineTransform(scaleX: 1, y: 1)
-                                                        weakSelf?.placeNameLabel.transform = CGAffineTransform(scaleX: 1, y: 1)
-                                    })
-                                    
-        },
-                                completion: { (didComplete:Bool) in
-                                    if let strongSelf = weakSelf {
-                                        strongSelf.placeNameLabel.textColor = UIColor.white
-                                        
-                                        print("Run COMPLETION")
-                                        completion(strongSelf)
-                                    }
-        })
         
         
     }

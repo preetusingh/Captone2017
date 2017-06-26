@@ -46,7 +46,7 @@ class NearByClaimedCollectionCell: UICollectionViewCell {
         contentView.addSubview(customContentView)
     }
     
-    func startSelectedAnimation(completion:@escaping (XHERNearByClaimedCollectionCell)->()) {
+    func startSelectedAnimation(completion:@escaping (NearByClaimedCollectionCell)->()) {
         weak var weakSelf = self
         UIView.animateKeyframes(withDuration: 0.4, delay: 0, options: [],
                                 animations: {

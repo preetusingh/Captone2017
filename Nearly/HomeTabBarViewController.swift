@@ -74,7 +74,7 @@ class HomeTabBarViewController: UIViewController {
         homeFeedNavi = UINavigationController(rootViewController: homeFeedViewController)
         //homeFeedNavi.navigationBar.barTintColor =
         
-        discoverViewController = DiscoveryViewController()
+        discoverViewController = Discovery1ViewController()
         discoveryNavi = UINavigationController(rootViewController: discoverViewController)
         //discoveryNavi.navigationBar.barTintColor =
         
