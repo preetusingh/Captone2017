@@ -59,7 +59,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.setupView()
+       // self.setupView()
         
         weak var weakSelf = self
         getNearByClaimedBounties {
