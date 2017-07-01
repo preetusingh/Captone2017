@@ -17,6 +17,10 @@
 		024AE2931EE71F9200444E7F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE2921EE71F9200444E7F /* LoginViewController.swift */; };
 		024AE2961EE7218C00444E7F /* loginInputView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 024AE2951EE7218C00444E7F /* loginInputView.swift */; };
 		024AE2981EE721BD00444E7F /* loginInputView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 024AE2971EE721BD00444E7F /* loginInputView.xib */; };
+		026DD5F21F12E65B00DE0A05 /* HomeFeedHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5F11F12E65B00DE0A05 /* HomeFeedHeaderView.swift */; };
+		026DD5F41F12E68800DE0A05 /* HomeFeedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD5F31F12E68800DE0A05 /* HomeFeedHeaderView.xib */; };
+		026DD5F81F12E81400DE0A05 /* NearByClaimedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5F61F12E81400DE0A05 /* NearByClaimedViewCell.swift */; };
+		026DD5F91F12E81400DE0A05 /* NearByClaimedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */; };
 		02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */; };
 		02AF5CE81EF9F34000FB8E01 /* AutoCompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */; };
 		02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE91EF9F3B900FB8E01 /* POI.swift */; };
@@ -66,6 +70,10 @@
 		024AE2921EE71F9200444E7F /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		024AE2951EE7218C00444E7F /* loginInputView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = loginInputView.swift; sourceTree = "<group>"; };
 		024AE2971EE721BD00444E7F /* loginInputView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = loginInputView.xib; sourceTree = "<group>"; };
+		026DD5F11F12E65B00DE0A05 /* HomeFeedHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedHeaderView.swift; sourceTree = "<group>"; };
+		026DD5F31F12E68800DE0A05 /* HomeFeedHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFeedHeaderView.xib; sourceTree = "<group>"; };
+		026DD5F61F12E81400DE0A05 /* NearByClaimedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByClaimedViewCell.swift; sourceTree = "<group>"; };
+		026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearByClaimedViewCell.xib; sourceTree = "<group>"; };
 		02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteCell.swift; sourceTree = "<group>"; };
 		02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCompleteCell.xib; sourceTree = "<group>"; };
 		02AF5CE91EF9F3B900FB8E01 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
@@ -176,6 +184,8 @@
 		024AE2901EE71D7D00444E7F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				026DD5F51F12E7F300DE0A05 /* Nearby Claimed Cell */,
+				026DD5F01F12E63B00DE0A05 /* Header */,
 				02B17B851F03086000FB8A8F /* NearbyCell */,
 				02B17B7B1F03086000FB8A8F /* Carousel */,
 				02B17B701F03086000FB8A8F /* DetailViewController */,
@@ -210,6 +220,24 @@
 				024AE2971EE721BD00444E7F /* loginInputView.xib */,
 			);
 			name = InputView;
+			sourceTree = "<group>";
+		};
+		026DD5F01F12E63B00DE0A05 /* Header */ = {
+			isa = PBXGroup;
+			children = (
+				026DD5F11F12E65B00DE0A05 /* HomeFeedHeaderView.swift */,
+				026DD5F31F12E68800DE0A05 /* HomeFeedHeaderView.xib */,
+			);
+			name = Header;
+			sourceTree = "<group>";
+		};
+		026DD5F51F12E7F300DE0A05 /* Nearby Claimed Cell */ = {
+			isa = PBXGroup;
+			children = (
+				026DD5F61F12E81400DE0A05 /* NearByClaimedViewCell.swift */,
+				026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */,
+			);
+			name = "Nearby Claimed Cell";
 			sourceTree = "<group>";
 		};
 		02AF5CE41EF9F31500FB8E01 /* AutoCompleteCell */ = {
@@ -424,6 +452,7 @@
 				024AE2851EE71D5100444E7F /* LaunchScreen.storyboard in Resources */,
 				02DB733F1EF0944D00C5C467 /* HomeTabBarViewController.xib in Resources */,
 				02B17B891F03086000FB8A8F /* NearByClaimedCollectionCell.xib in Resources */,
+				026DD5F91F12E81400DE0A05 /* NearByClaimedViewCell.xib in Resources */,
 				0208A74C1F009CF800AF40A5 /* Discovery1ViewController.xib in Resources */,
 				02B17B8D1F03086000FB8A8F /* NavigationTitleView.xib in Resources */,
 				024AE2821EE71D5100444E7F /* Assets.xcassets in Resources */,
@@ -433,6 +462,7 @@
 				02B17B6F1F03086000FB8A8F /* POIViewCell.xib in Resources */,
 				02DB733A1EF08FF000C5C467 /* LocationRequestViewController.xib in Resources */,
 				024AE2981EE721BD00444E7F /* loginInputView.xib in Resources */,
+				026DD5F41F12E68800DE0A05 /* HomeFeedHeaderView.xib in Resources */,
 				02AF5CE81EF9F34000FB8E01 /* AutoCompleteCell.xib in Resources */,
 				02B17B671F0300DD00FB8A8F /* LocationCollectionViewCell.xib in Resources */,
 			);
@@ -495,6 +525,7 @@
 			files = (
 				024AE2931EE71F9200444E7F /* LoginViewController.swift in Sources */,
 				024AE27B1EE71D5100444E7F /* AppDelegate.swift in Sources */,
+				026DD5F21F12E65B00DE0A05 /* HomeFeedHeaderView.swift in Sources */,
 				02B17B8C1F03086000FB8A8F /* NavigationTitleView.swift in Sources */,
 				024AE28E1EE71D6D00444E7F /* User.swift in Sources */,
 				02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */,
@@ -514,6 +545,7 @@
 				02B17B911F03086000FB8A8F /* Content.swift in Sources */,
 				02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */,
 				0208A74B1F009CF800AF40A5 /* Discovery1ViewController.swift in Sources */,
+				026DD5F81F12E81400DE0A05 /* NearByClaimedViewCell.swift in Sources */,
 				02DB734D1EF096AB00C5C467 /* ProfileViewController.swift in Sources */,
 				02DB73501EF0972200C5C467 /* Constant.swift in Sources */,
 				024AE2961EE7218C00444E7F /* loginInputView.swift in Sources */,
@@ -645,7 +677,7 @@
 				INFOPLIST_FILE = Nearly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xHere;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nearly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -660,7 +692,7 @@
 				INFOPLIST_FILE = Nearly/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.xHere;
+				PRODUCT_BUNDLE_IDENTIFIER = com.Nearly;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};

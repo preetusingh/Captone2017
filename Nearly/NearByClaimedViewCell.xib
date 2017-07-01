@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="344" id="ReD-KV-2Cz" customClass="NearByClaimedViewCell" customModule="Nearly" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="344"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ReD-KV-2Cz" id="jPQ-77-ltv">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="343"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7Rg-4t-Vyt">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="343.5"/>
+                        <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <collectionView multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="none" translatesAutoresizingMaskIntoConstraints="NO" id="OyI-6C-J80">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="343.5"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <collectionViewLayout key="collectionViewLayout" id="tNe-5U-nBN" customClass="CircleCollectionViewLayout" customModule="xHere" customModuleProvider="target"/>
+                    </collectionView>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="trailing" secondItem="OyI-6C-J80" secondAttribute="trailing" id="Kdd-mR-MnH"/>
+                    <constraint firstAttribute="bottom" secondItem="OyI-6C-J80" secondAttribute="bottom" id="PZQ-Bc-MOK"/>
+                    <constraint firstItem="OyI-6C-J80" firstAttribute="top" secondItem="jPQ-77-ltv" secondAttribute="top" id="Vq2-xk-mHC"/>
+                    <constraint firstItem="7Rg-4t-Vyt" firstAttribute="top" secondItem="jPQ-77-ltv" secondAttribute="top" id="eE6-hS-joE"/>
+                    <constraint firstItem="OyI-6C-J80" firstAttribute="leading" secondItem="jPQ-77-ltv" secondAttribute="leading" id="gFg-kw-o5a"/>
+                    <constraint firstAttribute="bottom" secondItem="7Rg-4t-Vyt" secondAttribute="bottom" id="lgw-kY-QXn"/>
+                    <constraint firstItem="7Rg-4t-Vyt" firstAttribute="leading" secondItem="jPQ-77-ltv" secondAttribute="leading" id="mW9-AW-tuP"/>
+                    <constraint firstAttribute="trailing" secondItem="7Rg-4t-Vyt" secondAttribute="trailing" id="pH8-Vj-TBU"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="backgroundColorView" destination="7Rg-4t-Vyt" id="x6P-UB-tfB"/>
+                <outlet property="collectionView" destination="OyI-6C-J80" id="RMs-oD-8Z0"/>
+            </connections>
+            <point key="canvasLocation" x="92" y="-71"/>
+        </tableViewCell>
+    </objects>
+</document>

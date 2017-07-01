@@ -7,7 +7,11 @@
 //
 
 import UIKit
+import Parse
+import ParseFacebookUtils
 import MapKit
+import FacebookSDK
+
 enum LoginSignupViewMode {
     case login
     case signup
@@ -54,37 +58,12 @@ class LoginViewController: UIViewController {
     //    @IBOutlet weak var emailTextField: UITextField!
     //    @IBOutlet weak var passwordTextField: UITextField!
 
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         toggleView(animated: false)
-        // Do any additional setup after loading the view.
-    }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
-
-
-
-
-
-
-    
-    
-
     @IBAction func handleSignup(_ sender: UIButton) {
         if mode == .login {
             toggleView(animated: true)
@@ -94,7 +73,15 @@ class LoginViewController: UIViewController {
             newUser.username = signupEmailInput.textFieldView.text!
             newUser.password = signupPasswordInput.textFieldView.text!
             newUser.email = signupEmailInput.textFieldView.text!
-            
+            newUser.signUpInBackground(block: { (success : Bool, error : Error?) in
+                if let error = error {
+                    // we probably want to let user know about the error.
+                    print(error.localizedDescription)
+                }
+                else {
+                    self.login(userName: newUser.username!, password: newUser.password!)
+                }
+            })
         }
         
     }
@@ -114,8 +101,18 @@ class LoginViewController: UIViewController {
     
     
     func login(userName: String, password: String){
-
-        self.openNextController()
+        User.logInWithUsername(inBackground: userName, password: password) { (user: PFUser?, error:Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else {
+                print("userLogged In \(user?.username)")
+                //                self.performSegue(withIdentifier: "segueToTimeLine", sender: nil)
+                self.openNextController()
+                
+                
+            }
+        }
         
     }
     
@@ -173,6 +170,7 @@ class LoginViewController: UIViewController {
     func openNextController(){
         
         
+        
         if CLLocationManager.locationServicesEnabled() {
             switch(CLLocationManager.authorizationStatus()) {
             case .notDetermined, .restricted, .denied:
@@ -196,12 +194,60 @@ class LoginViewController: UIViewController {
         }
         
         
-        
     }
     
     @IBAction func loginWithFacebook(_ sender: UIButton) {
-        
+        let permissions = ["public_profile", "email"]
+        PFFacebookUtils.logIn (withPermissions: permissions) { (fbUser: PFUser?, error:Error?) in
+            if let error = error {
+                print(error.localizedDescription)
+            }
+            else {
+                FBRequestConnection.start(withGraphPath: "me?fields=birthday,gender,first_name,last_name,picture,cover,email", completionHandler: { (connection :FBRequestConnection?, result: Any?, error: Error?) in
+                    
+                    let user = User.current()
+                    if fbUser?.isNew == true {
+                        user?.tokens = 1000
+                    }
+                    let data = result as! NSDictionary
+                    print(data)
+                    let picture = data["picture"] as! NSDictionary
+                    let pictureData = picture["data"] as! NSDictionary
+                    let url = URL(string: pictureData["url"] as! String)
+                    let imageData = NSData.init(contentsOf: url!)
+                    let profilePicture = PFFile(name: "profileImage.jpg", data: imageData! as Data)
+                    //                    let profilePicture = PFFile(data: imageData! as Data)
+                    let cover = data["cover"] as! NSDictionary
+                    let coverUrl = URL(string: cover["source"] as! String)
+                    let coverImageData = NSData.init(contentsOf: coverUrl!)
+                    let coverPicture  = PFFile(name: "coverImage.jpg", data: coverImageData! as Data)
+                    user?.setObject(profilePicture!, forKey: "profileImage")
+                    user?.setObject(coverPicture!, forKey: "coverPictrue")
+                    user?.setValue(cover["source"], forKey: "coverPictureUrl")
+                    user?.setValue(pictureData["url"], forKey: "profilePictureUrl")
+                    user?.email = data["email"] as? String
+                    user?.username = data["email"] as? String
+                    user?.lastName = data["last_name"] as? String
+                    user?.firstName = data["first_name"] as? String
+                    user?.coverPictureUrl = cover["source"] as? String
+                    //                    user?.setValue(data["email"], forKey: "email")
+                    //                    user?.setValue(data["email"], forKey: "username")
+                    //                    user?.setValue(data["last_name"], forKey: "lastName")
+                    //                    user?.setValue(data["first_name"], forKey: "firstName")
+                    user?.saveInBackground()
+                    //                    let homeTabBarVC = XHERHomeTabBarViewController()
+                    //                    self.present(homeTabBarVC, animated: true, completion: nil)
+                    
+                    self.openNextController()
+                    
+                    
+                })
+            }
+        }
     }
+        
+        
+    
     
 }
 
