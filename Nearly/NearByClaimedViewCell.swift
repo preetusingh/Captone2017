@@ -11,7 +11,7 @@ import UIKit
 
 @objc protocol NearByClaimedViewCellDelegate {
     func userDidSwipeCollectionViewTo(offset:CGFloat)
-    func userDidChoose(claimedBounty:=Bounty)
+    func userDidChoose(claimedBounty:Bounty)
 }
 
 class NearByClaimedViewCell: UITableViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout, UIScrollViewDelegate {

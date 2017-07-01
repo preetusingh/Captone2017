@@ -21,6 +21,8 @@
 		026DD5F41F12E68800DE0A05 /* HomeFeedHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD5F31F12E68800DE0A05 /* HomeFeedHeaderView.xib */; };
 		026DD5F81F12E81400DE0A05 /* NearByClaimedViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5F61F12E81400DE0A05 /* NearByClaimedViewCell.swift */; };
 		026DD5F91F12E81400DE0A05 /* NearByClaimedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */; };
+		026DD5FB1F12E81400DE0A05 /* HomeFeedUnclaimedBountyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5FA1F12E81400DE0A05 /* HomeFeedUnclaimedBountyCell.swift */; };
+		026DD5FD1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5FC1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift */; };
 		02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */; };
 		02AF5CE81EF9F34000FB8E01 /* AutoCompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */; };
 		02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE91EF9F3B900FB8E01 /* POI.swift */; };
@@ -74,6 +76,8 @@
 		026DD5F31F12E68800DE0A05 /* HomeFeedHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HomeFeedHeaderView.xib; sourceTree = "<group>"; };
 		026DD5F61F12E81400DE0A05 /* NearByClaimedViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NearByClaimedViewCell.swift; sourceTree = "<group>"; };
 		026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearByClaimedViewCell.xib; sourceTree = "<group>"; };
+		026DD5FA1F12E81400DE0A05 /* HomeFeedUnclaimedBountyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedUnclaimedBountyCell.swift; sourceTree = "<group>"; };
+		026DD5FC1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedNearByClaimedCollectionCell.swift; sourceTree = "<group>"; };
 		02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteCell.swift; sourceTree = "<group>"; };
 		02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCompleteCell.xib; sourceTree = "<group>"; };
 		02AF5CE91EF9F3B900FB8E01 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
@@ -227,6 +231,8 @@
 			children = (
 				026DD5F11F12E65B00DE0A05 /* HomeFeedHeaderView.swift */,
 				026DD5F31F12E68800DE0A05 /* HomeFeedHeaderView.xib */,
+				026DD5FA1F12E81400DE0A05 /* HomeFeedUnclaimedBountyCell.swift */,
+				026DD5FC1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift */,
 			);
 			name = Header;
 			sourceTree = "<group>";
@@ -546,7 +552,9 @@
 				02DB73391EF08FF000C5C467 /* LocationRequestViewController.swift in Sources */,
 				0208A74B1F009CF800AF40A5 /* Discovery1ViewController.swift in Sources */,
 				026DD5F81F12E81400DE0A05 /* NearByClaimedViewCell.swift in Sources */,
+				026DD5FD1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift in Sources */,
 				02DB734D1EF096AB00C5C467 /* ProfileViewController.swift in Sources */,
+				026DD5FB1F12E81400DE0A05 /* HomeFeedUnclaimedBountyCell.swift in Sources */,
 				02DB73501EF0972200C5C467 /* Constant.swift in Sources */,
 				024AE2961EE7218C00444E7F /* loginInputView.swift in Sources */,
 				02B17B6E1F03086000FB8A8F /* POIViewCell.swift in Sources */,
