@@ -23,6 +23,8 @@
 		026DD5F91F12E81400DE0A05 /* NearByClaimedViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */; };
 		026DD5FB1F12E81400DE0A05 /* HomeFeedUnclaimedBountyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5FA1F12E81400DE0A05 /* HomeFeedUnclaimedBountyCell.swift */; };
 		026DD5FD1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5FC1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift */; };
+		026DD6001F12E81400DE0A05 /* BountyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5FE1F12E81400DE0A05 /* BountyViewCell.swift */; };
+		026DD6011F12E81400DE0A05 /* BountyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD5FF1F12E81400DE0A05 /* BountyViewCell.xib */; };
 		02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */; };
 		02AF5CE81EF9F34000FB8E01 /* AutoCompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */; };
 		02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE91EF9F3B900FB8E01 /* POI.swift */; };
@@ -78,6 +80,8 @@
 		026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NearByClaimedViewCell.xib; sourceTree = "<group>"; };
 		026DD5FA1F12E81400DE0A05 /* HomeFeedUnclaimedBountyCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedUnclaimedBountyCell.swift; sourceTree = "<group>"; };
 		026DD5FC1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedNearByClaimedCollectionCell.swift; sourceTree = "<group>"; };
+		026DD5FE1F12E81400DE0A05 /* BountyViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BountyViewCell.swift; sourceTree = "<group>"; };
+		026DD5FF1F12E81400DE0A05 /* BountyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BountyViewCell.xib; sourceTree = "<group>"; };
 		02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteCell.swift; sourceTree = "<group>"; };
 		02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCompleteCell.xib; sourceTree = "<group>"; };
 		02AF5CE91EF9F3B900FB8E01 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
@@ -242,6 +246,8 @@
 			children = (
 				026DD5F61F12E81400DE0A05 /* NearByClaimedViewCell.swift */,
 				026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */,
+				026DD5FE1F12E81400DE0A05 /* BountyViewCell.swift */,
+				026DD5FF1F12E81400DE0A05 /* BountyViewCell.xib */,
 			);
 			name = "Nearby Claimed Cell";
 			sourceTree = "<group>";
@@ -460,6 +466,7 @@
 				02B17B891F03086000FB8A8F /* NearByClaimedCollectionCell.xib in Resources */,
 				026DD5F91F12E81400DE0A05 /* NearByClaimedViewCell.xib in Resources */,
 				0208A74C1F009CF800AF40A5 /* Discovery1ViewController.xib in Resources */,
+				026DD6011F12E81400DE0A05 /* BountyViewCell.xib in Resources */,
 				02B17B8D1F03086000FB8A8F /* NavigationTitleView.xib in Resources */,
 				024AE2821EE71D5100444E7F /* Assets.xcassets in Resources */,
 				024AE2801EE71D5100444E7F /* Main.storyboard in Resources */,
@@ -546,6 +553,7 @@
 				02B17B731F03086000FB8A8F /* DetailViewController.swift in Sources */,
 				02B17B8F1F03086000FB8A8F /* Media.swift in Sources */,
 				02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */,
+				026DD6001F12E81400DE0A05 /* BountyViewCell.swift in Sources */,
 				02B17B811F03086000FB8A8F /* Bounty.swift in Sources */,
 				02B17B6A1F03079400FB8A8F /* LeftPaddedTextField.swift in Sources */,
 				02B17B911F03086000FB8A8F /* Content.swift in Sources */,
