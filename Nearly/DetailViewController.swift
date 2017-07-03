@@ -126,7 +126,7 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         
         self.claimUserProfileImage.layer.cornerRadius = self.claimUserProfileImage.frame.size.height/2
         self.claimUserProfileImage.layer.borderWidth = 2
-       // self.claimUserProfileImage.layer.borderColor = kXHERYellow.cgColor
+        self.claimUserProfileImage.layer.borderColor = kYellow.cgColor
         
         self.claimedBountyImageView.layer.cornerRadius = 20
         //self.claimedBountyImageView.bounds.size.height/10
