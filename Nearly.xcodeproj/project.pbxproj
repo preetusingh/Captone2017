@@ -25,6 +25,7 @@
 		026DD5FD1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5FC1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift */; };
 		026DD6001F12E81400DE0A05 /* BountyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5FE1F12E81400DE0A05 /* BountyViewCell.swift */; };
 		026DD6011F12E81400DE0A05 /* BountyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD5FF1F12E81400DE0A05 /* BountyViewCell.xib */; };
+		026DD62E1F1462B500DE0A05 /* CircleCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD62D1F1462B500DE0A05 /* CircleCollectionViewLayout.swift */; };
 		02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */; };
 		02AF5CE81EF9F34000FB8E01 /* AutoCompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */; };
 		02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE91EF9F3B900FB8E01 /* POI.swift */; };
@@ -82,6 +83,7 @@
 		026DD5FC1F12E81400DE0A05 /* HomeFeedNearByClaimedCollectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeFeedNearByClaimedCollectionCell.swift; sourceTree = "<group>"; };
 		026DD5FE1F12E81400DE0A05 /* BountyViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BountyViewCell.swift; sourceTree = "<group>"; };
 		026DD5FF1F12E81400DE0A05 /* BountyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BountyViewCell.xib; sourceTree = "<group>"; };
+		026DD62D1F1462B500DE0A05 /* CircleCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCollectionViewLayout.swift; sourceTree = "<group>"; };
 		02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteCell.swift; sourceTree = "<group>"; };
 		02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCompleteCell.xib; sourceTree = "<group>"; };
 		02AF5CE91EF9F3B900FB8E01 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 		026DD5F51F12E7F300DE0A05 /* Nearby Claimed Cell */ = {
 			isa = PBXGroup;
 			children = (
+				026DD62D1F1462B500DE0A05 /* CircleCollectionViewLayout.swift */,
 				026DD5F61F12E81400DE0A05 /* NearByClaimedViewCell.swift */,
 				026DD5F71F12E81400DE0A05 /* NearByClaimedViewCell.xib */,
 				026DD5FE1F12E81400DE0A05 /* BountyViewCell.swift */,
@@ -550,6 +553,7 @@
 				02AF5CED1EF9F45400FB8E01 /* GooglePlacesServer.swift in Sources */,
 				02B17B881F03086000FB8A8F /* NearByClaimedCollectionCell.swift in Sources */,
 				02DB73431EF0964A00C5C467 /* HomeFeedViewController.swift in Sources */,
+				026DD62E1F1462B500DE0A05 /* CircleCollectionViewLayout.swift in Sources */,
 				02B17B731F03086000FB8A8F /* DetailViewController.swift in Sources */,
 				02B17B8F1F03086000FB8A8F /* Media.swift in Sources */,
 				02DB733E1EF0944D00C5C467 /* HomeTabBarViewController.swift in Sources */,

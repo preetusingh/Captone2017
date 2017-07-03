@@ -49,38 +49,86 @@
             endingLineNumber = "297"
             landmarkName = "fetchLocationsWithPlace(searchText:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nearly/ProfileViewController.swift"
+            timestampString = "521441037.105014"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "setUpView()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nearly/ProfileViewController.swift"
+            timestampString = "521441155.213032"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "223"
+            endingLineNumber = "223"
+            landmarkName = "getClaimedBouties(isRefresh:)"
+            landmarkType = "7">
             <Locations>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Nearly.DiscoveryViewController.fetchLocationsWithPlace (searchText : Swift.String) -&gt; ()"
+                  symbolName = "Nearly.ProfileViewController.getClaimedBouties (isRefresh : Swift.Bool) -&gt; ()"
                   moduleName = "Nearly"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dji/Desktop/MyDemos/Demos/Nearly/Nearly/DiscoveryViewController.swift"
-                  timestampString = "520037853.54547"
+                  urlString = "file:///Users/dji/Desktop/MyDemos/Demos/Nearly/Nearly/ProfileViewController.swift"
+                  timestampString = "521441169.356133"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "299"
-                  endingLineNumber = "299"
-                  offsetFromSymbolStart = "27">
+                  startingLineNumber = "223"
+                  endingLineNumber = "223"
+                  offsetFromSymbolStart = "96">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "Nearly.DiscoveryViewController.(fetchLocationsWithPlace (searchText : Swift.String) -&gt; ()).(closure #1)"
+                  symbolName = "Nearly.ProfileViewController.(getClaimedBouties (isRefresh : Swift.Bool) -&gt; ()).(closure #1)"
                   moduleName = "Nearly"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/dji/Desktop/MyDemos/Demos/Nearly/Nearly/DiscoveryViewController.swift"
-                  timestampString = "520037853.547722"
+                  urlString = "file:///Users/dji/Desktop/MyDemos/Demos/Nearly/Nearly/ProfileViewController.swift"
+                  timestampString = "521441169.358896"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "300"
-                  endingLineNumber = "300"
-                  offsetFromSymbolStart = "19">
+                  startingLineNumber = "224"
+                  endingLineNumber = "224"
+                  offsetFromSymbolStart = "20">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Nearly/ProfileViewController.swift"
+            timestampString = "521441203.958994"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "225"
+            endingLineNumber = "225"
+            landmarkName = "getClaimedBouties(isRefresh:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
