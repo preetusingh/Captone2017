@@ -230,13 +230,9 @@ class LoginViewController: UIViewController {
                     user?.lastName = data["last_name"] as? String
                     user?.firstName = data["first_name"] as? String
                     user?.coverPictureUrl = cover["source"] as? String
-                    //                    user?.setValue(data["email"], forKey: "email")
-                    //                    user?.setValue(data["email"], forKey: "username")
-                    //                    user?.setValue(data["last_name"], forKey: "lastName")
-                    //                    user?.setValue(data["first_name"], forKey: "firstName")
+                   
                     user?.saveInBackground()
-                    //                    let homeTabBarVC = XHERHomeTabBarViewController()
-                    //                    self.present(homeTabBarVC, animated: true, completion: nil)
+                    
                     
                     self.openNextController()
                     
