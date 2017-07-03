@@ -254,7 +254,7 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
             
             let cell = tableView.cellForRow(at: indexPath) as! BountyViewCell
             cell.startSelectedAnimation(completion: { (selectedCell:BountyViewCell) in
-                let detailViewController = EDetailViewController(nibName: "DetailViewController", bundle: nil)
+                let detailViewController = DetailViewController(nibName: "DetailViewController", bundle: nil)
                 detailViewController.currentBounty = selectedCell.bounty
                 detailViewController.viewControllerMode = .claiming
                 self.navigationController?.pushViewController(detailViewController, animated: true)
