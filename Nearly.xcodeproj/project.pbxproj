@@ -26,6 +26,14 @@
 		026DD6001F12E81400DE0A05 /* BountyViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD5FE1F12E81400DE0A05 /* BountyViewCell.swift */; };
 		026DD6011F12E81400DE0A05 /* BountyViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD5FF1F12E81400DE0A05 /* BountyViewCell.xib */; };
 		026DD62E1F1462B500DE0A05 /* CircleCollectionViewLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD62D1F1462B500DE0A05 /* CircleCollectionViewLayout.swift */; };
+		026DD6361F15407300DE0A05 /* FusumaCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD6301F15407300DE0A05 /* FusumaCameraViewController.swift */; };
+		026DD6371F15407300DE0A05 /* FusumaCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD6311F15407300DE0A05 /* FusumaCameraViewController.xib */; };
+		026DD6381F15407300DE0A05 /* PBJVisionCameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD6321F15407300DE0A05 /* PBJVisionCameraViewController.swift */; };
+		026DD6391F15407300DE0A05 /* PBJVisionCameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD6331F15407300DE0A05 /* PBJVisionCameraViewController.xib */; };
+		026DD63A1F15407300DE0A05 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD6341F15407300DE0A05 /* CameraViewController.swift */; };
+		026DD63B1F15407300DE0A05 /* CameraViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD6351F15407300DE0A05 /* CameraViewController.xib */; };
+		026DD63F1F15413D00DE0A05 /* AnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 026DD63D1F15413D00DE0A05 /* AnimationViewController.swift */; };
+		026DD6401F15413D00DE0A05 /* AnimationViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 026DD63E1F15413D00DE0A05 /* AnimationViewController.xib */; };
 		02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */; };
 		02AF5CE81EF9F34000FB8E01 /* AutoCompleteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */; };
 		02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02AF5CE91EF9F3B900FB8E01 /* POI.swift */; };
@@ -84,6 +92,14 @@
 		026DD5FE1F12E81400DE0A05 /* BountyViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BountyViewCell.swift; sourceTree = "<group>"; };
 		026DD5FF1F12E81400DE0A05 /* BountyViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BountyViewCell.xib; sourceTree = "<group>"; };
 		026DD62D1F1462B500DE0A05 /* CircleCollectionViewLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircleCollectionViewLayout.swift; sourceTree = "<group>"; };
+		026DD6301F15407300DE0A05 /* FusumaCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FusumaCameraViewController.swift; sourceTree = "<group>"; };
+		026DD6311F15407300DE0A05 /* FusumaCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FusumaCameraViewController.xib; sourceTree = "<group>"; };
+		026DD6321F15407300DE0A05 /* PBJVisionCameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PBJVisionCameraViewController.swift; sourceTree = "<group>"; };
+		026DD6331F15407300DE0A05 /* PBJVisionCameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PBJVisionCameraViewController.xib; sourceTree = "<group>"; };
+		026DD6341F15407300DE0A05 /* CameraViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		026DD6351F15407300DE0A05 /* CameraViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CameraViewController.xib; sourceTree = "<group>"; };
+		026DD63D1F15413D00DE0A05 /* AnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationViewController.swift; sourceTree = "<group>"; };
+		026DD63E1F15413D00DE0A05 /* AnimationViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AnimationViewController.xib; sourceTree = "<group>"; };
 		02AF5CE51EF9F34000FB8E01 /* AutoCompleteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AutoCompleteCell.swift; sourceTree = "<group>"; };
 		02AF5CE61EF9F34000FB8E01 /* AutoCompleteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AutoCompleteCell.xib; sourceTree = "<group>"; };
 		02AF5CE91EF9F3B900FB8E01 /* POI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = POI.swift; sourceTree = "<group>"; };
@@ -194,6 +210,8 @@
 		024AE2901EE71D7D00444E7F /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				026DD63C1F15412300DE0A05 /* Claimed Animation */,
+				026DD62F1F15406200DE0A05 /* CameraController */,
 				026DD5F51F12E7F300DE0A05 /* Nearby Claimed Cell */,
 				026DD5F01F12E63B00DE0A05 /* Header */,
 				02B17B851F03086000FB8A8F /* NearbyCell */,
@@ -253,6 +271,28 @@
 				026DD5FF1F12E81400DE0A05 /* BountyViewCell.xib */,
 			);
 			name = "Nearby Claimed Cell";
+			sourceTree = "<group>";
+		};
+		026DD62F1F15406200DE0A05 /* CameraController */ = {
+			isa = PBXGroup;
+			children = (
+				026DD6301F15407300DE0A05 /* FusumaCameraViewController.swift */,
+				026DD6311F15407300DE0A05 /* FusumaCameraViewController.xib */,
+				026DD6321F15407300DE0A05 /* PBJVisionCameraViewController.swift */,
+				026DD6331F15407300DE0A05 /* PBJVisionCameraViewController.xib */,
+				026DD6341F15407300DE0A05 /* CameraViewController.swift */,
+				026DD6351F15407300DE0A05 /* CameraViewController.xib */,
+			);
+			name = CameraController;
+			sourceTree = "<group>";
+		};
+		026DD63C1F15412300DE0A05 /* Claimed Animation */ = {
+			isa = PBXGroup;
+			children = (
+				026DD63D1F15413D00DE0A05 /* AnimationViewController.swift */,
+				026DD63E1F15413D00DE0A05 /* AnimationViewController.xib */,
+			);
+			name = "Claimed Animation";
 			sourceTree = "<group>";
 		};
 		02AF5CE41EF9F31500FB8E01 /* AutoCompleteCell */ = {
@@ -463,9 +503,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				02DB734E1EF096AB00C5C467 /* ProfileViewController.xib in Resources */,
+				026DD6391F15407300DE0A05 /* PBJVisionCameraViewController.xib in Resources */,
 				02B17B741F03086000FB8A8F /* DetailViewController.xib in Resources */,
 				024AE2851EE71D5100444E7F /* LaunchScreen.storyboard in Resources */,
 				02DB733F1EF0944D00C5C467 /* HomeTabBarViewController.xib in Resources */,
+				026DD6401F15413D00DE0A05 /* AnimationViewController.xib in Resources */,
+				026DD63B1F15407300DE0A05 /* CameraViewController.xib in Resources */,
+				026DD6371F15407300DE0A05 /* FusumaCameraViewController.xib in Resources */,
 				02B17B891F03086000FB8A8F /* NearByClaimedCollectionCell.xib in Resources */,
 				026DD5F91F12E81400DE0A05 /* NearByClaimedViewCell.xib in Resources */,
 				0208A74C1F009CF800AF40A5 /* Discovery1ViewController.xib in Resources */,
@@ -541,12 +585,16 @@
 			files = (
 				024AE2931EE71F9200444E7F /* LoginViewController.swift in Sources */,
 				024AE27B1EE71D5100444E7F /* AppDelegate.swift in Sources */,
+				026DD63F1F15413D00DE0A05 /* AnimationViewController.swift in Sources */,
 				026DD5F21F12E65B00DE0A05 /* HomeFeedHeaderView.swift in Sources */,
+				026DD63A1F15407300DE0A05 /* CameraViewController.swift in Sources */,
+				026DD6381F15407300DE0A05 /* PBJVisionCameraViewController.swift in Sources */,
 				02B17B8C1F03086000FB8A8F /* NavigationTitleView.swift in Sources */,
 				024AE28E1EE71D6D00444E7F /* User.swift in Sources */,
 				02AF5CE71EF9F34000FB8E01 /* AutoCompleteCell.swift in Sources */,
 				02AF5CF41EF9F45400FB8E01 /* GeoPoint.swift in Sources */,
 				02B17B7E1F03086000FB8A8F /* CarouselViewController.swift in Sources */,
+				026DD6361F15407300DE0A05 /* FusumaCameraViewController.swift in Sources */,
 				02D099621F00893D00EF348E /* LocationCollectionViewCell.swift in Sources */,
 				02B17B841F03086000FB8A8F /* Server.swift in Sources */,
 				02AF5CEA1EF9F3B900FB8E01 /* POI.swift in Sources */,

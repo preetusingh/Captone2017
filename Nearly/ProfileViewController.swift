@@ -11,9 +11,6 @@ import Parse
 import SVProgressHUD
 
 
-
-
-
 class ProfileViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tokenLabel: UILabel!
