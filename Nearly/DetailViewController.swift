@@ -374,9 +374,9 @@ class DetailViewController: UIViewController, UIImagePickerControllerDelegate, U
         }
         else
         {
-            //let cameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
-            //cameraViewController.currentBounty = self.currentBounty
-            //self.present(cameraViewController, animated: false, completion: nil)
+            let cameraViewController = CameraViewController(nibName: "CameraViewController", bundle: nil)
+            cameraViewController.currentBounty = self.currentBounty
+            self.present(cameraViewController, animated: false, completion: nil)
         }
     }
     
