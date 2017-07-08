@@ -27,12 +27,18 @@ class HomeFeedViewController: UIViewController, UITableViewDelegate, UITableView
         super.viewDidLoad()
         
         //        self.title = "HOME"
-        let appLogo = UIImage(named: "e_logo")
-        let appLogoImageView = UIImageView(image: appLogo)
-        appLogoImageView.contentMode = .scaleAspectFit
-        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
-        appLogoImageView.frame = titleView.bounds
-        titleView.addSubview(appLogoImageView)
+//        let appLogo = UIImage(named: "icons8-NFC N_100")
+//        let appLogoImageView = UIImageView(image: appLogo)
+//        appLogoImageView.contentMode = .scaleAspectFit
+//        let titleView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+//        appLogoImageView.frame = titleView.bounds
+//        titleView.addSubview(appLogoImageView)
+//        self.navigationItem.titleView = titleView
+        
+        
+        self.navigationController?.navigationBar.tintColor = UIColor.black
+        let titleView = NavigationTitleView(frame: CGRect(x: 0, y: 0, width: 200, height: 100))
+        titleView.textLabel.text = "Nearly"
         self.navigationItem.titleView = titleView
         
         self.setupTableView()
