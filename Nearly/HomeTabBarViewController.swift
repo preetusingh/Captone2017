@@ -7,9 +7,7 @@
 //
 
 import UIKit
-
-
-import UIKit
+import Parse
 
 
 class HomeTabBarViewController: UIViewController {
@@ -54,10 +52,14 @@ class HomeTabBarViewController: UIViewController {
         
         self.setupContainedControllers()
         
+        let currentUser = PFUser.current() as! User
         profileImageView.layer.cornerRadius = profileImageView.bounds.size.height/2
         profileImageView.layer.borderColor = UIColor.gray.cgColor
         profileImageView.layer.borderWidth = 2
-        profileImageView.setImageWith(currentUser.profileImageUrl!)
+        if(currentUser.profileImageUrl != nil){
+            profileImageView.setImageWith(currentUser.profileImageUrl!)
+        }
+        
 
 
         // Do any additional setup after loading the view.
