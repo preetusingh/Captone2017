@@ -30,7 +30,7 @@ class BountyViewCell: UITableViewCell {
     @IBOutlet weak var claimedImage: UIImageView!
     
     
-    var bounty: XHERBounty! {
+    var bounty: Bounty! {
         
         didSet {
             
@@ -109,7 +109,7 @@ class BountyViewCell: UITableViewCell {
     }
     
     func initSubviews() {
-        let nib = UINib(nibName: "XHERBountyViewCell", bundle: nil)
+        let nib = UINib(nibName: "BountyViewCell", bundle: nil)
         nib.instantiate(withOwner: self, options: nil)
         cellContentView.frame = bounds
         
@@ -125,8 +125,8 @@ class BountyViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func startSelectedAnimation(completion:@escaping (XHERBountyViewCell)->()) {
-        self.claimITLabel.textColor = kXHERYellow
+    func startSelectedAnimation(completion:@escaping (BountyViewCell)->()) {
+        self.claimITLabel.textColor = kYellow
         weak var weakSelf = self
         UIView.animateKeyframes(withDuration: 0.4, delay: 0, options: [],
                                 animations: {
@@ -153,7 +153,7 @@ class BountyViewCell: UITableViewCell {
         
     }
     
-    func startDeniedSelectionAnimation(completion:@escaping (XHERBountyViewCell)->()) {
+    func startDeniedSelectionAnimation(completion:@escaping (BountyViewCell)->()) {
         self.distanceLabel.textColor = UIColor.red
         weak var weakSelf = self
         UIView.animateKeyframes(withDuration: 1.4, delay: 0, options: [],
